@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/Image"/>
+    <qresource prefix="/">
+        <file>XO logo.png</file>
+        <file>16_Player_Match_game_competition-512.png</file>
+        <file>back-button-icon.jpg</file>
+        <file>PlayervsPlayer-2.png</file>
+        <file>Player vs Player 3.png</file>
+        <file>N7rdJZ.jpg</file>
+        <file>1600x500-blank-png.png</file>
+        <file>background of interface .jpg</file>
+        <file>interface background.jpg</file>
+        <file>inside play.jpg</file>
+        <file>PvP.png</file>
+        <file>PvC.png</file>
+    </qresource>
+</RCC>
