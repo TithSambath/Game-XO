@@ -262,6 +262,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     int x_Newvalue = 0;
     int x_old_value = 0;
      qDebug()<<"cannot draw";
+     qDebug()<<"cannot draw";
         if ( x%50 == 0 && y%50 == 0 )
         {
             qDebug()<<"cannot draw";
