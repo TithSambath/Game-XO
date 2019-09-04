@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/Image"/>
     <qresource prefix="/">
-        <file>XO logo.png</file>
         <file>16_Player_Match_game_competition-512.png</file>
         <file>back-button-icon.jpg</file>
         <file>PlayervsPlayer-2.png</file>
@@ -13,5 +12,7 @@
         <file>inside play.jpg</file>
         <file>PvP.png</file>
         <file>PvC.png</file>
+        <file>PLAYBUTTON.png</file>
+        <file>QUITBUTTON.png</file>
     </qresource>
 </RCC>
