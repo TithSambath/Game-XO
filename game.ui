@@ -18,7 +18,7 @@
   </property>
   <widget class="QWidget" name="Background">
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/interface background.jpg);</string>
+    <string notr="true">border-image: url(:/Front background.jpg);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
