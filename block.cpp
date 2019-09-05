@@ -256,6 +256,20 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     y = event->lastScenePos().y();
     qDebug()<<"x is:" << x << "y is :" << y;
 
+
+
+
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;qDebug()<<"x is:" << x << "y is :" << y;
+
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;
+    qDebug()<<"x is:" << x << "y is :" << y;
+
+
     // draw player line when the player press:
 
     int i;
