@@ -248,7 +248,6 @@ void BLOCK::DefinePlayerTurn(int CountPlayerTurn)
         player = 2;
     }
 }
-int clickcount = -1;
 // Mouse Press Event:
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -268,7 +267,6 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
         }
         else if ( x%50 > 5 && x%50 < 45 && ( y%50 <= 3 || (y%50 >= 47 && y%50 <= 49 ) ))
                 {// horizontal condition:
-                    clickcount += 1;
                     x1 = x - (x%50) ;
                     x2 = x -(x%50) + 50 ;
                     if (y%50 <= 3)

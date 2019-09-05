@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="Background">
    <property name="styleSheet">
     <string notr="true">border-image: url(:/interface background.jpg);</string>
@@ -23,8 +26,11 @@
       <property name="enabled">
        <bool>true</bool>
       </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(:/1600x500-blank-png.png);</string>
+      </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
@@ -290,11 +296,59 @@ QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
       <widget class="QWidget" name="page_2">
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Maximum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Maximum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_5">
             <item>
              <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <spacer name="verticalSpacer_2">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Maximum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item>
                <widget class="QPushButton" name="Solo_Button">
                 <property name="sizePolicy">
@@ -316,8 +370,11 @@ QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-image: url(:/1600x500-blank-png.png);
-image: url(:/PvP.png);
+                 <string notr="true">QPushButton
+{
+image: url(:/PvP.png);max-width: 512px;max-height: 512px;
+}
+QPushButton:hover {image: url(:/PvP.png);border-width: 20%}
 
 
 </string>
@@ -330,6 +387,22 @@ image: url(:/PvP.png);
                 </property>
                </widget>
               </item>
+              <item>
+               <spacer name="verticalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Maximum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
             </item>
            </layout>
@@ -338,6 +411,22 @@ image: url(:/PvP.png);
            <layout class="QHBoxLayout" name="horizontalLayout_6">
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <spacer name="verticalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Maximum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item>
                <widget class="QPushButton" name="Dual_button">
                 <property name="sizePolicy">
@@ -356,14 +445,34 @@ image: url(:/PvP.png);
                  </font>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-image: url(:/1600x500-blank-png.png);
-image: url(:/PvC.png);
+                 <string notr="true">
+QPushButton
+{
+image: url(:/PvC.png);max-width:512px;height:512px;
+}
+QPushButton:hover {image: url(:/PvC.png);border-width: 20%}
 </string>
                 </property>
                 <property name="text">
                  <string/>
                 </property>
                </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Maximum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
              </layout>
             </item>
