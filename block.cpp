@@ -235,37 +235,19 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         parent->addItem(dl4block1);
 }
 
-int count = -1;// declare here because it work not like in header file
 
-void BLOCK::DefinePlayerTurn(int CountPlayerTurn)
-{
-    qDebug()<<"Count Player Turn = "<<CountPlayerTurn;
-    if (CountPlayerTurn % 2 == 0)
-    {
-        player = 1;
-    }
-    else {
-        player = 2;
-    }
-}
-// Mouse Press Event:
+int BLOCK::player = 0 ;
+
+
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
-    qDebug()<<"x is:" << x << "y is :" << y;
 
     // draw player line when the player press:
 
-    int i;
-    int x_Newvalue = 0;
-    int x_old_value = 0;
-    qDebug()<< "HEllo World";
-        if ( x%50 == 0 && y%50 == 0 )
-        {
-            qDebug()<<"cannot draw";
-        }
-        else if ( x%50 > 5 && x%50 < 45 && ( y%50 <= 3 || (y%50 >= 47 && y%50 <= 49 ) ))
+
+        if ( x%50 > 5 && x%50 < 45 && ( y%50 <= 3 || (y%50 >= 47 && y%50 <= 49 ) ))
                 {// horizontal condition:
                     x1 = x - (x%50) ;
                     x2 = x -(x%50) + 50 ;
@@ -277,15 +259,11 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                     {
                         y2 = y1 = 50 - y%50 + y;
                     }
-
-                        count += 1;//count to find player turn
-                        DefinePlayerTurn(count);
-
+                        player = ( player + 1 ) % 2 ;
                         playerline *pline = new playerline;
                         pline->Set_Player_Line(x1,y1,x2,y2,player);
                         scene()->addItem(pline);
                 }
-
         else if (y%50 > 5 && y%50 < 45 && (x%50 <= 3 || (x%50 >= 47 && x%50 <= 49)))
                 {
                     y1 = y - y%50 ;
@@ -299,63 +277,10 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                        x2 = x1 = 50 - x%50 + x;
                     }
                 // determine player one turn or player 2 turn:
-                    count += 1;//count to find player turn
-                    DefinePlayerTurn(count);
-
+                 player = ( player + 1 ) % 2 ;
                  playerline *pline = new playerline;
                  pline->Set_Player_Line(x1,y1,x2,y2,player);
                  scene()->addItem(pline);
-
-
-                }
-
-        else if (x%50 == 0 && y%50 != 0)
-                {   x_Newvalue = 0;
-                    for (i = 0;i < 17;i++)
-                    {
-                        x_old_value = x_Newvalue;
-                        x_Newvalue += 50;
-
-                        if(y > x_old_value && y <= x_Newvalue)
-                        {
-                            // determine player one turn or player 2 turn:
-                                count += 1;//count to find player turn
-                                DefinePlayerTurn(count);
-                            // setup player line:
-
-                            qDebug()<<"vertical line";
-                            qDebug()<< "x is between "<< x_old_value <<"and"<<x_Newvalue;
-                            playerline *pline = new playerline;
-                            pline->Set_Player_Line(x,x_old_value,x,x_Newvalue,player);
-                            scene()->addItem(pline);
-                            break;
-                        }
-                     }
-                        x_Newvalue = 0;
-                }
-
-        else if (x%50 != 0 && y%50 == 0)
-                {
-                    for (i = 0;i < 17;i++)
-                    {
-                        x_old_value = x_Newvalue;
-                        x_Newvalue += 50;
-
-                        if(x > x_old_value && x <= x_Newvalue)
-                        {
-                         // determine player one turn or player 2 turn:
-                            count += 1;//count to find player turn
-                            DefinePlayerTurn(count);
-
-                         // setup player line:
-                            qDebug()<<"Horizontal line";
-                            qDebug()<< "y is between "<< x_old_value <<"and"<<x_Newvalue;
-                            playerline *pline = new playerline;
-                            pline->Set_Player_Line(x_old_value,y,x_Newvalue,y,player);
-                            scene()->addItem(pline);
-                            break;
-                        }
-                     }
                 }
 
 }

@@ -10,7 +10,7 @@ playerline::playerline()
 
 void playerline::Set_Player_Line(int x1,int y1,int x2,int y2,int Player)
 {
-    if (Player == 1)
+    if (Player == 0)
     {
         setLine(x1,y1,x2,y2);
         QPen Pen;
@@ -18,7 +18,7 @@ void playerline::Set_Player_Line(int x1,int y1,int x2,int y2,int Player)
         Pen.setColor(Qt::green);
         setPen(Pen);
     }
-    else if (Player == 2){
+    else if (Player == 1){
         setLine(x1,y1,x2,y2);
         QPen Pen;
         Pen.setWidth(5);
