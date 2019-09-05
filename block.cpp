@@ -280,40 +280,12 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                         y2 = y1 = 50 - y%50 + y;
                     }
 
-                    if (clickcount == 0){
                         count += 1;//count to find player turn
                         DefinePlayerTurn(count);
 
                         playerline *pline = new playerline;
                         pline->Set_Player_Line(x1,y1,x2,y2,player);
                         scene()->addItem(pline);
-
-                        XstartAxis[0] = x1;
-                        XendAxis[0] = x2;
-
-                        qDebug()<< XstartAxis[0];
-                        qDebug()<< XendAxis[0];
-                    }
-                    else {
-                        for (int c = 0; c < clickcount; c++){
-                            if (x1 != XstartAxis[c] && x2 != XendAxis[c]){
-                                XstartAxis[c+1] = x1;
-                                XendAxis[c+1] = x2;
-                                count += 1;//count to find player turn
-                                DefinePlayerTurn(count);// determine player 1 turn or player 2 turn:
-
-                                playerline *pline = new playerline;
-                                pline->Set_Player_Line(x1,y1,x2,y2,player);
-                                scene()->addItem(pline);
-                            }
-                            else {
-                                qDebug()<<"you can't draw on the same line.";
-                            }
-                        }
-                    }
-
-
-
                 }
 
         else if (y%50 > 5 && y%50 < 45 && (x%50 <= 3 || (x%50 >= 47 && x%50 <= 49)))
