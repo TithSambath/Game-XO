@@ -237,13 +237,20 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 }
 
 
-int BLOCK::player = 0 ;
-int BLOCK::count = -1 ;
+int BLOCK::player = 0;
+int BLOCK::count = -1;
 float BLOCK::Store_coordinatex[50];
 float BLOCK::Store_coordinatey[50];
 int BLOCK::i;
-int BLOCK::Time_of_store = 0 ;
-int BLOCK::notTrue = 0 ;
+int BLOCK::Time_of_store = 0;
+int BLOCK::notTrue = 0;
+
+int BLOCK::count1 = -1;
+float BLOCK::Store_vcoordinatex[50];
+float BLOCK::Store_vcoordinatey[50];
+int BLOCK::i1;
+int BLOCK::Time_of_store1 = 0;
+int BLOCK::notTrue1 = 0;
 
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -287,7 +294,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                             qDebug()<< "HEllo";
                             if (median_of_x == Store_coordinatex[i] && y1 == Store_coordinatey[i]){
                                qDebug()<<"can't draw twice on the same single line";\
-                               True += 1;
+
 
                             }
                             else {
@@ -327,11 +334,60 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                     {
                        x2 = x1 = 50 - x%50 + x;
                     }
+                    count1 += 1;
+                    median_of_y = (y1+y2)/2;
+                    if (count1 == 0){
+                        Store_vcoordinatex[0] = x1;
+                        Store_vcoordinatey[0] = median_of_y; // x1 == x2
+                        Time_of_store1 += 1;
+                        qDebug()<< median_of_y << x1;
+                        player = ( player + 1 ) % 2 ;
+                        playerline *pline = new playerline;
+                        pline->Set_Player_Line(x1,y1,x2,y2,player);
+                        scene()->addItem(pline);
+                    }
+                    else {
+                        int Time1 = Time_of_store1;
+                        qDebug()<< Store_vcoordinatex[0];
+                        qDebug()<< Store_vcoordinatey[0];
+                        qDebug()<< count1;
+                        qDebug()<< Time1;
+                        for (i1 = 0; i1 < Time1; i1++){
+                            qDebug()<< "HEllo";
+                            if (median_of_y == Store_vcoordinatey[i] && x1 == Store_vcoordinatex[i]){
+                               qDebug()<<"can't draw twice on the same single line";\
+
+
+                            }
+                            else {
+                                notTrue1 += 1;
+                                qDebug()<<"I'm here.";
+                                qDebug()<<notTrue1;
+                            }
+                        }
+                        if (notTrue1 == Time1)  {
+                            qDebug()<<"i1 = "<<i1;
+                                Store_vcoordinatex[i] = x1;
+                                Store_vcoordinatey[i] = median_of_y;
+                                Time_of_store1 += 1;
+                                qDebug()<< median_of_y << x1;
+                                player = ( player + 1 ) % 2 ;
+                                playerline *pline = new playerline;
+                                pline->Set_Player_Line(x1,y1,x2,y2,player);
+                                scene()->addItem(pline);
+                                notTrue = 0;
+                                qDebug()<< "Time of store1 = "<<Time_of_store1;
+                        }
+                        else {
+                            notTrue1 = 0;
+                        }
+
+                }
                 // determine player one turn or player 2 turn:
-                 player = ( player + 1 ) % 2 ;
-                 playerline *pline = new playerline;
-                 pline->Set_Player_Line(x1,y1,x2,y2,player);
-                 scene()->addItem(pline);
+                // player = ( player + 1 ) % 2 ;
+                // playerline *pline = new playerline;
+                // pline->Set_Player_Line(x1,y1,x2,y2,player);
+                // scene()->addItem(pline);
                 }
 
 }

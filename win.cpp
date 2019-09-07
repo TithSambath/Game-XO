@@ -33,7 +33,7 @@ int win::generator(int x, int y)
             }
     else if (y%50 > 10 && y%50 < 40 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
             {
-                y = y - (y%50) + 25 ;
+                y = y - (y%50) + 25;
                 if (x%50 <= 5)
                 {
                    x = x - x%50;
