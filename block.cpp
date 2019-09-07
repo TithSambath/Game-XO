@@ -7,6 +7,7 @@
 #include <QGraphicsView>
 #include <border.h>
 
+
 BLOCK::BLOCK()
 {
 
@@ -237,19 +238,18 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 
 
 int BLOCK::player = 0 ;
-int count = -1;
-float Store_coordinatex[50];
-float Store_coordinatey[50];
-int i;
-int Time_of_store = 0;
-int True = 0;
-int notTrue = 0;
+int BLOCK::count = -1 ;
+float BLOCK::Store_coordinatex[50];
+float BLOCK::Store_coordinatey[50];
+int BLOCK::i;
+int BLOCK::Time_of_store = 0 ;
+int BLOCK::notTrue = 0 ;
 
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
-
+    generator(x,y);
     // draw player line when the player press:
 
 
@@ -261,7 +261,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                     {
                         y2 = y1 = y - y%50;
                     }
-                    if (y%50 >= 47 && y%50 <= 49)
+                    else if (y%50 >= 47 && y%50 <= 49)
                     {
                         y2 = y1 = 50 - y%50 + y;
                     }
@@ -323,7 +323,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                     {
                        x2 = x1 = x - x%50;
                     }
-                    if (x%50 >= 47 && x%50 <= 49)
+                    else if (x%50 >= 47 && x%50 <= 49)
                     {
                        x2 = x1 = 50 - x%50 + x;
                     }

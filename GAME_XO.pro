@@ -29,13 +29,15 @@ SOURCES += \
         border.cpp \
         game.cpp \
         main.cpp \
-        playerline.cpp
+        playerline.cpp \
+        win.cpp
 
 HEADERS += \
     block.h \
     border.h \
     game.h \
-    playerline.h
+    playerline.h \
+    win.h
 
 FORMS += \
     game.ui

@@ -5,8 +5,9 @@
 #include <QMouseEvent>
 #include <QObject>
 #include <QGraphicsView>
+#include "win.h"
 
-class BLOCK :public QGraphicsRectItem
+class BLOCK :public QGraphicsRectItem , public win
 {
 public:
     BLOCK();
@@ -26,6 +27,13 @@ private:
     //float Store_coordinatex[50];
     //float Store_coordinatey[50];
     float median_of_x;
+
+    static int count ;
+    static float Store_coordinatex[50];
+    static float Store_coordinatey[50];
+    static int i;
+    static int Time_of_store ;
+    static int notTrue ;
 
 
 };
