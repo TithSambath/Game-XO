@@ -11,10 +11,7 @@
         <file>inside play.jpg</file>
         <file>PvP.png</file>
         <file>PvC.png</file>
-        <file>PLAYBUTTON.png</file>
         <file>QUITBUTTON.png</file>
         <file>Front background.jpg</file>
-        <file>startButton.png</file>
-        <file>Untitled-3.png</file>
     </qresource>
 </RCC>

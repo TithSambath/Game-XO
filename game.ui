@@ -14,11 +14,11 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">border-image: url(:/Front background.jpg);</string>
   </property>
   <widget class="QWidget" name="Background">
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/Front background.jpg);</string>
+    <string notr="true"/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -34,32 +34,6 @@
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
-        <item row="0" column="2">
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="0">
-         <spacer name="horizontalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="0" column="1">
          <layout class="QGridLayout" name="gridLayout_5">
           <item row="3" column="0">
@@ -68,7 +42,7 @@
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Expanding</enum>
+             <enum>QSizePolicy::Preferred</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -169,17 +143,29 @@ border-image: url(:/1600x500-blank-png.png);</string>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>40</width>
-                <height>100</height>
+                <height>20</height>
                </size>
               </property>
              </spacer>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_4">
+             <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0">
+              <property name="spacing">
+               <number>14</number>
+              </property>
+              <property name="sizeConstraint">
+               <enum>QLayout::SetFixedSize</enum>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QPushButton" name="PLAY_BUTTON_3">
                 <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
+                 <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
@@ -192,6 +178,9 @@ border-image: url(:/1600x500-blank-png.png);</string>
                   <bold>false</bold>
                  </font>
                 </property>
+                <property name="mouseTracking">
+                 <bool>false</bool>
+                </property>
                 <property name="autoFillBackground">
                  <bool>false</bool>
                 </property>
@@ -200,9 +189,8 @@ border-image: url(:/1600x500-blank-png.png);</string>
 QPushButton
 {
 border-image: url(:/1600x500-blank-png.png);
-	image: url(:/Untitled-3.png);
 }
-QPushButton:hover {image: url(:/Untitled-3.png);border-width: -10%}
+QPushButton:hover {	border-width: -5%}
 </string>
                 </property>
                 <property name="text">
@@ -221,6 +209,12 @@ QPushButton:hover {image: url(:/Untitled-3.png);border-width: -10%}
               </item>
               <item>
                <widget class="QPushButton" name="QUIT_BUTTON_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="font">
                  <font>
                   <family>Cooper Black</family>
@@ -231,9 +225,9 @@ QPushButton:hover {image: url(:/Untitled-3.png);border-width: -10%}
                  <string notr="true">QPushButton
 {
 border-image: url(:/1600x500-blank-png.png);
-	image: url(:/QUITBUTTON.png);
+
 }
-QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
+QPushButton:hover {border-width: -5% }</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -259,7 +253,7 @@ QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
               <property name="sizeHint" stdset="0">
                <size>
                 <width>40</width>
-                <height>100</height>
+                <height>20</height>
                </size>
               </property>
              </spacer>
@@ -267,6 +261,32 @@ QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
            </layout>
           </item>
          </layout>
+        </item>
+        <item row="0" column="0">
+         <spacer name="horizontalSpacer_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="2">
+         <spacer name="horizontalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -349,6 +369,7 @@ QPushButton:hover {image: url(:/QUITBUTTON.png);border-width: -10% }</string>
                 <property name="styleSheet">
                  <string notr="true">QPushButton
 {
+border-image: url(:/1600x500-blank-png.png);
 image: url(:/PvP.png);max-width: 512px;max-height: 512px;
 }
 QPushButton:hover {image: url(:/PvP.png);border-width: 20%}
@@ -425,6 +446,7 @@ QPushButton:hover {image: url(:/PvP.png);border-width: 20%}
                  <string notr="true">
 QPushButton
 {
+border-image: url(:/1600x500-blank-png.png);
 image: url(:/PvC.png);max-width:512px;height:512px;
 }
 QPushButton:hover {image: url(:/PvC.png);border-width: 20%}

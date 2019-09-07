@@ -237,7 +237,13 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 
 
 int BLOCK::player = 0 ;
-
+int count = -1;
+float Store_coordinatex[50];
+float Store_coordinatey[50];
+int i;
+int Time_of_store = 0;
+int True = 0;
+int notTrue = 0;
 
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -248,7 +254,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 
         if ( x%50 > 5 && x%50 < 45 && ( y%50 <= 3 || (y%50 >= 47 && y%50 <= 49 ) ))
-                {// horizontal condition:
+        {// horizontal condition:
                     x1 = x - (x%50) ;
                     x2 = x -(x%50) + 50 ;
                     if (y%50 <= 3)
@@ -259,11 +265,56 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
                     {
                         y2 = y1 = 50 - y%50 + y;
                     }
+                    count += 1;
+                    median_of_x = (x1+x2)/2;
+                    if (count == 0){
+                        Store_coordinatex[0] = median_of_x;
+                        Store_coordinatey[0] = y1; // y1 == y2
+                        Time_of_store += 1;
+                        qDebug()<< median_of_x << y1;
                         player = ( player + 1 ) % 2 ;
                         playerline *pline = new playerline;
                         pline->Set_Player_Line(x1,y1,x2,y2,player);
                         scene()->addItem(pline);
+                    }
+                    else {
+                        int Time = Time_of_store;
+                        qDebug()<< Store_coordinatex[0];
+                        qDebug()<< Store_coordinatey[0];
+                        qDebug()<< count;
+                        qDebug()<< Time;
+                        for (i = 0; i < Time; i++){
+                            qDebug()<< "HEllo";
+                            if (median_of_x == Store_coordinatex[i] && y1 == Store_coordinatey[i]){
+                               qDebug()<<"can't draw twice on the same single line";\
+                               True += 1;
+
+                            }
+                            else {
+                                notTrue += 1;
+                                qDebug()<<"I'm here.";
+                                qDebug()<<notTrue;
+                            }
+                        }
+                        if (notTrue == Time)  {
+                            qDebug()<<"i = "<<i;
+                                Store_coordinatex[i] = median_of_x;
+                                Store_coordinatey[i] = y1;
+                                Time_of_store += 1;
+                                qDebug()<< median_of_x << y1;
+                                player = ( player + 1 ) % 2 ;
+                                playerline *pline = new playerline;
+                                pline->Set_Player_Line(x1,y1,x2,y2,player);
+                                scene()->addItem(pline);
+                                notTrue = 0;
+                                qDebug()<< "Time of store = "<<Time_of_store;
+                        }
+                        else {
+                            notTrue = 0;
+                        }
+
                 }
+        }
         else if (y%50 > 5 && y%50 < 45 && (x%50 <= 3 || (x%50 >= 47 && x%50 <= 49)))
                 {
                     y1 = y - y%50 ;

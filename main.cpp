@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     Game GameProcess;
-    GameProcess.show();
+    GameProcess.showMaximized();
 
 
 

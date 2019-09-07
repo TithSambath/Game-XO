@@ -23,7 +23,9 @@ private:
     int y_oldvalue = 0;
     int y_value = 0;
     static int player ;// store 1 for player 1 and 2 for player 2
-
+    //float Store_coordinatex[50];
+    //float Store_coordinatey[50];
+    float median_of_x;
 
 
 };
