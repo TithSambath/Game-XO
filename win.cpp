@@ -6,7 +6,9 @@ win::win()
 
 }
 
-int win :: storege[44] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
+
+
+int win :: storage[100] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
                           , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625
                           , 4750650 , 4500675 , 4250700 , 4000675 , 3750650 , 3500625 , 3250600 , 3000575 , 2750550 , 2500525
                           , 2250500 , 2000475 , 1750450 , 1500425 , 1750400 , 2000375 , 2250350 , 2500325 , 2750300 , 3000275
@@ -15,8 +17,10 @@ int win :: storege[44] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500
 
 int win :: n = 44;
 
+
 int win::generator(int x, int y)
 {
+    int median = NULL ;
     if ( x%50 > 10 && x%50 < 40 && ( y%50 <= 5 || (y%50 >= 45 && y%50 <= 49 ) ))
             {// horizontal condition:
                 x = x -(x%50) + 25 ;
@@ -29,7 +33,7 @@ int win::generator(int x, int y)
                     y = 50 - y%50 + y;
                 }
 
-                x = x * 10000 + y ;
+                median = x * 10000 + y ;
             }
     else if (y%50 > 10 && y%50 < 40 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
             {
@@ -42,35 +46,54 @@ int win::generator(int x, int y)
                 {
                    x = 50 - x%50 + x;
                 }
-
-                x = x * 10000 + y ;
-            // determine player one turn or player 2 turn:
-
+                median = x * 10000 + y ;
             }
-    else {
-        x = y = 0;
-    }
+    qDebug() << "median = " << median;
+    return median;
+}
 
-    bool con = 0;
+bool win::storageManagement(int median)
+{
+    bool manager = false;
 
-    if (x != 0)
+    if (median == 0)
     {
-        for (int i = 0 ; i < n ; i++)
+        return manager ;
+    }
+    else
+    {
+        for (int i = 0 ; i < n ; i++ )
         {
-           if (storege[i] == x)
-            con = 1;
-           else {
-               con = 0;
-               break;
-           }
-        }
-
-        if (con)
-        {
-
+            if ( storage[i] == median )
+            {
+                manager = false;
+                break;
+            }
+            else
+            {
+                manager = true;
+            }
         }
     }
+    qDebug() << "manager = " << manager;
+    return  manager;
+}
 
-    qDebug() << "x = " << x ;
+int win::storageFunc(bool manager , int median)
+{
+    bool drawing = true;
 
+    if( manager == true )
+    {
+
+       storage[n] = median;
+       n = n + 1;
+       drawing = true ;
+    }
+    else
+    {
+        drawing = false;
+    }
+    qDebug() << "drawing = " << drawing ;
+    return  drawing;
 }

@@ -49,3 +49,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     background.qrc
+
+STATECHARTS +=
+
+DISTFILES +=

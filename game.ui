@@ -78,7 +78,7 @@
             <property name="styleSheet">
              <string notr="true">color: rgb(197, 60, 255);
 color: rgb(0, 0, 0);
-border-image: url(:/1600x500-blank-png.png);</string>
+background-color: rgba(0,0,0,0);</string>
             </property>
             <property name="text">
              <string>KROHLA X-O GAME</string>
@@ -188,7 +188,7 @@ border-image: url(:/1600x500-blank-png.png);</string>
                  <string notr="true">
 QPushButton
 {
-border-image: url(:/1600x500-blank-png.png);
+background-color: rgba(0,0,0,0);
 }
 QPushButton:hover {	border-width: -5%}
 </string>
@@ -224,7 +224,7 @@ QPushButton:hover {	border-width: -5%}
                 <property name="styleSheet">
                  <string notr="true">QPushButton
 {
-border-image: url(:/1600x500-blank-png.png);
+background-color: rgba(0,0,0,0);
 
 }
 QPushButton:hover {border-width: -5% }</string>
@@ -369,7 +369,7 @@ QPushButton:hover {border-width: -5% }</string>
                 <property name="styleSheet">
                  <string notr="true">QPushButton
 {
-border-image: url(:/1600x500-blank-png.png);
+background-color: rgba(0,0,0,0);
 image: url(:/PvP.png);max-width: 512px;max-height: 512px;
 }
 QPushButton:hover {image: url(:/PvP.png);border-width: 20%}
@@ -446,7 +446,7 @@ QPushButton:hover {image: url(:/PvP.png);border-width: 20%}
                  <string notr="true">
 QPushButton
 {
-border-image: url(:/1600x500-blank-png.png);
+background-color: rgba(0,0,0,0);
 image: url(:/PvC.png);max-width:512px;height:512px;
 }
 QPushButton:hover {image: url(:/PvC.png);border-width: 20%}
@@ -486,7 +486,7 @@ QPushButton:hover {image: url(:/PvC.png);border-width: 20%}
         <item row="0" column="0">
          <widget class="QGraphicsView" name="view">
           <property name="styleSheet">
-           <string notr="true">border-image: url(:/1600x500-blank-png.png);</string>
+           <string notr="true">background-color: rgba(0,0,0,0);</string>
           </property>
          </widget>
         </item>
