@@ -19,6 +19,11 @@ private:
     void DefinePlayerTurn(int CountPlayerTurn);
     int x;
     int y;
+    int x1,x2,y1,y2;
+    static int player ;// store 1 for player 1 and 2 for player 2
+
+
+
 
 };
 
