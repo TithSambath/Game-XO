@@ -260,7 +260,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
     if(drawing)
     {
 
-    if ( x%50 > 5 && x%50 < 45 && ( y%50 <= 5 || (y%50 >= 45 && y%50 <= 49 ) ))
+    if ( x%50 > 10 && x%50 < 40 && ( y%50 <= 5 || (y%50 >= 45 && y%50 <= 49 ) ))
     {// horizontal condition:
                 x1 = x - (x%50) ;
                 x2 = x -(x%50) + 50 ;
@@ -276,7 +276,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
 
 
      }
-    else if (y%50 > 5 && y%50 < 45 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
+    else if (y%50 > 10 && y%50 < 40 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
             {
                 y1 = y - y%50 ;
                 y2 = y - (y%50) + 50 ;
