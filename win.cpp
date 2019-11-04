@@ -3,20 +3,19 @@
 
 win::win()
 {
-
+    for (int i = 0 ; i < 44 ; i++) {
+        storage.append(border[i]);
+    }
 }
 
+QList<int> win :: storage;
 
-
-int win :: storage[100] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
+const int win :: border[44] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
                           , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625
                           , 4750650 , 4500675 , 4250700 , 4000675 , 3750650 , 3500625 , 3250600 , 3000575 , 2750550 , 2500525
                           , 2250500 , 2000475 , 1750450 , 1500425 , 1750400 , 2000375 , 2250350 , 2500325 , 2750300 , 3000275
                           , 3250250 , 3500225 , 3750200 , 4000175
                          };
-
-int win :: n = 44;
-
 
 int win::generator(int x, int y)
 {
@@ -62,9 +61,9 @@ bool win::storageManagement(int median)
     }
     else
     {
-        for (int i = 0 ; i < n ; i++ )
+        for (int i = 0 ; i < storage.size() ; i++ )
         {
-            if ( storage[i] == median )
+            if ( storage.at(i) == median )
             {
                 manager = false;
                 break;
@@ -86,8 +85,7 @@ int win::storageFunc(bool manager , int median)
     if( manager == true )
     {
 
-       storage[n] = median;
-       n = n + 1;
+       storage.append(median);
        drawing = true ;
     }
     else

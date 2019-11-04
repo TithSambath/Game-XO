@@ -21,7 +21,7 @@ Game::Game(QWidget *parent) :
 
     // create GraphicsView:
           ui->view->setScene(Scene);
-          ui->view->setFixedSize(16777215,850);
+          ui->view->setFixedSize(850,850);
     // remove scrollbars:
           ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

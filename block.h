@@ -7,7 +7,7 @@
 #include <QGraphicsView>
 #include "win.h"
 
-class BLOCK :public QGraphicsRectItem , public win
+class BLOCK :public QGraphicsRectItem
 {
 public:
     BLOCK();
@@ -20,6 +20,7 @@ private:
     int x;
     int y;
     int x1,x2,y1,y2;
+    static win Generator ;
     static int player ;// store 1 for player 1 and 2 for player 2
 
 

@@ -241,6 +241,8 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 
 int BLOCK::player = 0;
 
+win BLOCK :: Generator ;
+
 
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
@@ -248,9 +250,9 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     y = event->lastScenePos().y();
     int median;
     bool manager , drawing = true;
-    median = generator(x,y);
-    manager = storageManagement(median) ;
-    drawing = storageFunc(manager , median );
+    median = Generator.generator(x,y);
+    manager = Generator.storageManagement(median) ;
+    drawing = Generator.storageFunc(manager , median );
     drawingFunc(drawing , x , y);
 
 }

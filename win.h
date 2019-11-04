@@ -1,7 +1,6 @@
 #ifndef WIN_H
 #define WIN_H
-
-
+#include <QList>
 class win
 {
 public:
@@ -10,8 +9,9 @@ public:
     bool storageManagement(int median);
     int storageFunc(bool manager , int median );
 private:
-    static int storage[100];
-    static int n;
+    static const int border[44];
+    static QList <int> storage;
+    //static int n;
     static int player;
 };
 
