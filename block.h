@@ -14,6 +14,7 @@ public:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void Create_Board (QGraphicsScene * parent);
     void drawingFunc(bool drawing , int x , int y);
+    static int midPoint[61];
 private:
     QGraphicsScene *add_to_scene = new QGraphicsScene;
     void DefinePlayerTurn(int CountPlayerTurn);
