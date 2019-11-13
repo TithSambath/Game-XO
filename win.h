@@ -8,6 +8,7 @@ public:
     int generator (int x , int y);
     bool storageManagement(int median);
     int storageFunc(bool manager , int median );
+    //static int midPoint[60];
 private:
      int *border =   new int[44] {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
                        , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625

@@ -25,6 +25,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                 Pen_Hright_line_border.setWidth(3);
                 Pen_Hright_line_border.setColor(Qt::darkRed);
                 HRight_line_border->setPen(Pen_Hright_line_border);
+                //qDebug()<<"Mborder = "<<(400+incrementlater + 400+increment1)/2<<100+increment1 + 25;
+                //qDebug()<<"Mborder1 = "<<(400+incrementlater + 400+increment1)/2<<100+increment1 - 25;
             Parent->addItem(HRight_line_border);
             incrementlater += 50;
             //vertical border:
@@ -34,6 +36,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                 Pen_Vright_line_border.setWidth(3);
                 Pen_Vright_line_border.setColor(Qt::darkRed);
                 VRight_line_border->setPen(Pen_Vright_line_border);
+                //qDebug()<<"boder = "<<400+incrementlater + 25<<(100+increment1 + 150+increment1)/2;
+                //qDebug()<<"boder = "<<400+incrementlater - 25<<(100+increment1 + 150+increment1)/2;
             Parent->addItem(VRight_line_border);
 
         }
@@ -51,6 +55,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                 Pen_HDright_line_border.setWidth(3);
                 Pen_HDright_line_border.setColor(Qt::darkRed);
                 HDRight_line_border->setPen(Pen_HDright_line_border);
+                //qDebug()<<"boder = "<<(400+incrementlater + 400+increment1)/2<<750-increment1 + 25;
+                //qDebug()<<"boder = "<<(400+incrementlater + 400+increment1)/2<<750-increment1 - 25;
             Parent->addItem(HDRight_line_border);
             incrementlater += 50;
             //vertical border:
@@ -62,6 +68,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                     Pen_VDright_line_border.setWidth(3);
                     Pen_VDright_line_border.setColor(Qt::darkRed);
                     VDRight_line_border->setPen(Pen_VDright_line_border);
+                    //qDebug()<<"boder = "<<400+incrementlater + 25<<(750-increment1+700-increment1)/2;
+                    //qDebug()<<"boder = "<<400+incrementlater - 25<<(750-increment1+700-increment1)/2;
                 Parent->addItem(VDRight_line_border);
             }
         }
@@ -81,6 +89,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                     Pen_HTL_line_border.setWidth(3);
                     Pen_HTL_line_border.setColor(Qt::darkRed);
                     HTL_line_border->setPen(Pen_HTL_line_border);
+                    //qDebug()<<"boder = "<<(450-incrementlater + 450-increment1)/2<<100+increment1 + 25;
+                    //qDebug()<<"boder = "<<(450-incrementlater + 450-increment1)/2<<100+increment1 - 25;
                 Parent->addItem(HTL_line_border);
             }
             incrementlater += 50;
@@ -91,6 +101,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                 Pen_VTL_line_border.setWidth(3);
                 Pen_VTL_line_border.setColor(Qt::darkRed);
                 VTL_line_border->setPen(Pen_VTL_line_border);
+                //qDebug()<<"boder = "<<450-incrementlater + 25<<(100+increment1 + 150+increment1)/2;
+                //qDebug()<<"boder = "<<450-incrementlater - 25<<(100+increment1 + 150+increment1)/2;
            Parent->addItem(VTL_line_border);
 
         }
@@ -108,6 +120,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                     Pen_HDL_line_border.setWidth(3);
                     Pen_HDL_line_border.setColor(Qt::darkRed);
                     HDL_line_border->setPen(Pen_HDL_line_border);
+                    //qDebug()<<"boder = "<<(150+incrementlater + 150+increment1)/2<<400+increment1 + 25;
+                    //qDebug()<<"boder = "<<(150+incrementlater + 150+increment1)/2<<400+increment1 - 25;
                 Parent->addItem(HDL_line_border);
             incrementlater += 50;
 
@@ -118,6 +132,8 @@ void BORDER::Create_Border(QGraphicsScene *Parent)
                 Pen_VDL_line_border.setWidth(3);
                 Pen_VDL_line_border.setColor(Qt::darkRed);
                 VDL_line_border->setPen(Pen_VDL_line_border);
+                //qDebug()<<"boder = "<<150+incrementlater + 25<<(400+increment1 + 450+increment1)/2;
+                //qDebug()<<"boder = "<<150+incrementlater - 25<<(400+increment1 + 450+increment1)/2;
             Parent->addItem(VDL_line_border);
         }
 // check if user click on border or not:

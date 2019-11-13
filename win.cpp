@@ -1,6 +1,5 @@
 #include "win.h"
 #include <QDebug>
-
 win::win()
 {
     for (int i = 0 ; i < 44 ; i++) {
@@ -96,3 +95,5 @@ int win::storageFunc(bool manager , int median)
     qDebug() << "drawing = " << drawing ;
     return  drawing;
 }
+
+/////////////////////////////////////////

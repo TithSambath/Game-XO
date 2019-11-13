@@ -6,7 +6,7 @@
 #include <QPen>
 #include <QGraphicsView>
 #include <border.h>
-
+#include "win.h"
 
 BLOCK::BLOCK()
 {
@@ -256,7 +256,15 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     drawingFunc(drawing , x , y);
 
 }
-
+int midPoint[61] = {42504250,47504250,52504250,57504250,62504250,67504250,42504750,42505250,
+                    42505750,42506250,42506750,42503750,42503250,42502750,42502250,42501750,
+                    37504250,32504250,27504250,22504250,17504250,37503750,37503250,37502750,
+                    37502250,32503750,32503250,32502750,27503750,27503250,22503750,37504750,
+                    37505250,37505750,37506250,32504750,32505250,32505750,27504750,27505250,
+                    22504750,47503750,47503250,47502750,47502250,52503750,52503250,52502750,
+                    57503750,57503250,62503750,47504750,47505250,47505750,47506250,52504750,
+                    52505250,52505750,57504750,57505250,57505750
+                   };
 void BLOCK::drawingFunc(bool drawing, int x, int y)
 {
     if(drawing)
@@ -274,6 +282,47 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 {
                     y2 = y1 = 50 - y%50 + y;
                 }
+     ///////////////////////////////////////////////////////////////////////////////
+     // get median:
+                int Median = Generator.generator(x,y);
+                qDebug()<<Median;
+
+                int seperate = Median % 10000;
+                int seperatex = (Median - seperate);
+                int Median1;
+                int Median2;
+                static int j;
+                //seperate = seperate / 10; // we get y coordinate.
+                Median1 = seperatex + (seperate + 25);
+                qDebug()<<"Median 1 = "<<Median1;
+
+                Median2 = seperatex + (seperate - 25);
+                qDebug()<<"Median 2 = "<<Median2;
+
+                win *getmidPoint = new win();
+                for (int i = 0; i < 60; i++){
+                    if (Median1 == midPoint[i]/10){
+                           qDebug()<<"WE got one too.";
+                           qDebug()<<midPoint[i];
+                           midPoint[i] += 1;
+                           qDebug()<<midPoint[i];
+                           j = i;
+                           if (midPoint[i] % 10 == 4){
+                               qDebug()<<"Complete Square.";
+                           }
+                    }
+                    if (Median2 == midPoint[i]/10){
+                        qDebug()<<"ME got one too.";
+                        qDebug()<<midPoint[i];
+                        midPoint[i] += 1;
+                        qDebug()<<midPoint[i];
+                        if (midPoint[i] % 10 == 4){
+                            qDebug()<<"Complete Square.";
+                        }
+                    }
+                }
+    //////////////////////////////////////////////////////////////////////////////
+                qDebug()<<midPoint[j];
 
 
 
@@ -290,6 +339,42 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 {
                    x2 = x1 = 50 - x%50 + x;
                 }
+
+                int Median = Generator.generator(x,y);
+                int seperatey = Median % 10000;
+                int seperatex = (Median - seperatey)/10000;
+                int Median1;
+                int Median2;
+                static int j;
+                //seperate = seperate / 10; // we get y coordinate.
+                Median1 = seperatey + (seperatex + 25)*10000;
+                qDebug()<<"Median 11 = "<<Median1;
+
+                Median2 = seperatey + (seperatex - 25)*10000;
+                qDebug()<<"Median 22 = "<<Median2;
+
+                for (int i = 0; i < 60; i++){
+                    if (Median1 == midPoint[i]/10){
+                           qDebug()<<"WE got one too1.";
+                           qDebug()<<midPoint[i];
+                           midPoint[i] += 1;
+                           qDebug()<<midPoint[i];
+                           j = i;
+                           if (midPoint[i] % 10 == 4){
+                               qDebug()<<"Complete Square1.";
+                           }
+                    }
+                    if (Median2 == midPoint[i]/10){
+                        qDebug()<<"ME got one too1.";
+                        qDebug()<<midPoint[i];
+                        midPoint[i] += 1;
+                        qDebug()<<midPoint[i];
+                        if (midPoint[i] % 10 == 4){
+                            qDebug()<<"Complete Square1.";
+                        }
+                    }
+                }
+                qDebug()<<midPoint[j];
 
              }
                player = ( player + 1 ) % 2 ;
