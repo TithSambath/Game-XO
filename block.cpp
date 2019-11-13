@@ -12,6 +12,8 @@ BLOCK::BLOCK()
 {
 
 }
+
+//vgvghghghghjghjg///gghghghgggh
 void BLOCK::Create_Board(QGraphicsScene *parent)
 {
     int width = 50;
