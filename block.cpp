@@ -33,6 +33,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             LBlock->setPos(400+j,400);
             parent->addItem(LBlock);
         }
+        //dfadfdsfasdfdsfadsfdfdfsad
     // Mdown block:
     i = 0;
     j = 0;
