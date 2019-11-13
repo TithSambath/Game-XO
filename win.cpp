@@ -6,6 +6,12 @@ win::win()
         storage.append(border[i]);
     }
     delete[] border;
+    for (int i = 0 ; i < 61 ; i++)
+    {
+        middlePoint.append(midPoint[i]);
+        qDebug() << middlePoint.at(i);
+    }
+    delete[] midPoint;
 }
 
 QList<int> win :: storage;
@@ -21,7 +27,7 @@ QList<int> win :: middlePoint;
 
 int win::generator(int x, int y)
 {
-    int median = NULL ;
+    int median;
     if ( x%50 > 10 && x%50 < 40 && ( y%50 <= 5 || (y%50 >= 45 && y%50 <= 49 ) ))
             {// horizontal condition:
                 x = x -(x%50) + 25 ;
@@ -96,6 +102,30 @@ int win::storageFunc(bool manager , int median)
     }
     qDebug() << "drawing = " << drawing ;
     return  drawing;
+}
+
+void win::completeSquareChecking(int midpoint1, int midpoint2)
+{
+    for (int i = 0; i < 61; i++)
+    {
+        if (midpoint1 == middlePoint.at(i)/10)
+        {
+               middlePoint[i] = middlePoint.at(i)+1;
+               qDebug() << middlePoint.at(i);
+               if (middlePoint.at(i) % 10 == 4){
+                   qDebug()<<"Complete Square.";
+               }
+        }
+        if (midpoint2 == middlePoint.at(i)/10)
+        {
+            middlePoint[i] = middlePoint.at(i)+1;
+            qDebug() << middlePoint.at(i);
+            if (middlePoint.at(i) % 10 == 4){
+                qDebug()<<"Complete Square.";
+            }
+        }
+
+    }
 }
 
 
