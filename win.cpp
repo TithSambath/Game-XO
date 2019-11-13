@@ -10,6 +10,8 @@ win::win()
 
 QList<int> win :: storage;
 
+QList<int> win :: middlePoint;
+
   /*int win :: border[44] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
                           , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625
                           , 4750650 , 4500675 , 4250700 , 4000675 , 3750650 , 3500625 , 3250600 , 3000575 , 2750550 , 2500525
@@ -32,7 +34,7 @@ int win::generator(int x, int y)
                     y = 50 - y%50 + y;
                 }
 
-                median = x * 10000 + y ;
+                median =  x * 10000 + y ;
             }
     else if (y%50 > 10 && y%50 < 40 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
             {
@@ -96,4 +98,13 @@ int win::storageFunc(bool manager , int median)
     return  drawing;
 }
 
+<<<<<<< Updated upstream
 /////////////////////////////////////////
+=======
+void win::winChecking(bool horizontal)
+{
+
+}
+
+
+>>>>>>> Stashed changes

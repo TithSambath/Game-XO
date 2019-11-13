@@ -301,8 +301,10 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 qDebug()<<"Median 2 = "<<Median2;
 
                 win *getmidPoint = new win();
-                for (int i = 0; i < 60; i++){
-                    if (Median1 == midPoint[i]/10){
+                for (int i = 0; i < 60; i++)
+                {
+                    if (Median1 == midPoint[i]/10)
+                    {
                            qDebug()<<"WE got one too.";
                            qDebug()<<midPoint[i];
                            midPoint[i] += 1;
@@ -312,7 +314,8 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                                qDebug()<<"Complete Square.";
                            }
                     }
-                    if (Median2 == midPoint[i]/10){
+                    if (Median2 == midPoint[i]/10)
+                    {
                         qDebug()<<"ME got one too.";
                         qDebug()<<midPoint[i];
                         midPoint[i] += 1;
@@ -340,7 +343,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 {
                    x2 = x1 = 50 - x%50 + x;
                 }
-
+ //////////////////////////////////////////////////////////////////////////////
                 int Median = Generator.generator(x,y);
                 int seperatey = Median % 10000;
                 int seperatex = (Median - seperatey)/10000;
@@ -375,6 +378,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                         }
                     }
                 }
+//////////////////////////////////////////////////////////////////////////////
                 qDebug()<<midPoint[j];
 
              }

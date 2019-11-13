@@ -8,7 +8,11 @@ public:
     int generator (int x , int y);
     bool storageManagement(int median);
     int storageFunc(bool manager , int median );
+<<<<<<< Updated upstream
     //static int midPoint[60];
+=======
+    void winChecking(bool horizontal);
+>>>>>>> Stashed changes
 private:
      int *border =   new int[44] {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
                        , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625
@@ -16,6 +20,7 @@ private:
                        , 2250500 , 2000475 , 1750450 , 1500425 , 1750400 , 2000375 , 2250350 , 2500325 , 2750300 , 3000275
                        , 3250250 , 3500225 , 3750200 , 4000175
                       };
+    static QList <int> middlePoint;
     static QList <int> storage;
     //static int n;
     static int player;
