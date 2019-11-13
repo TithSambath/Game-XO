@@ -6,7 +6,7 @@ class win
 public:
     win();
     int generator (int x , int y);
-    bool storageManagement(int median);
+    bool storageManager(int median);
     int storageFunc(bool manager , int median );
 
     //static int midPoint[60];

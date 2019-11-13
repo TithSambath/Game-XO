@@ -27,7 +27,7 @@ QList<int> win :: middlePoint;
 
 int win::generator(int x, int y)
 {
-    int median;
+    int median = 0;
     if ( x%50 > 10 && x%50 < 40 && ( y%50 <= 5 || (y%50 >= 45 && y%50 <= 49 ) ))
             {// horizontal condition:
                 x = x -(x%50) + 25 ;
@@ -59,7 +59,7 @@ int win::generator(int x, int y)
     return median;
 }
 
-bool win::storageManagement(int median)
+bool win::storageManager(int median)
 {
     bool manager = false;
 

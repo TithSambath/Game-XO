@@ -254,7 +254,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     int median;
     bool manager , drawing = true;
     median = Generator.generator(x,y);
-    manager = Generator.storageManagement(median) ;
+    manager = Generator.storageManager(median) ;
     drawing = Generator.storageFunc(manager , median );
     drawingFunc(drawing , x , y);
 
@@ -287,6 +287,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 }
      ///////////////////////////////////////////////////////////////////////////////
      // get median:
+
                 int Median = Generator.generator(x,y);
                 qDebug()<<Median;
 
