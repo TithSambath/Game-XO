@@ -98,13 +98,7 @@ int win::storageFunc(bool manager , int median)
     return  drawing;
 }
 
-<<<<<<< Updated upstream
-/////////////////////////////////////////
-=======
-void win::winChecking(bool horizontal)
-{
-
-}
 
 
->>>>>>> Stashed changes
+
+
