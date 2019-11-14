@@ -132,10 +132,7 @@ int win::getPoint() const
     return point;
 }
 
-void win::setPoint(int value)
-{
-    point = value;
-}
+
 
 
 

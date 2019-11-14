@@ -13,7 +13,7 @@ public:
     void completeSquareChecking(int midpoint1 , int midpoint2);
 
     int getPoint() const;
-    void setPoint(int value);
+
 
 private:
     int *border =   new int[44] {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375

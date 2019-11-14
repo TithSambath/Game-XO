@@ -335,6 +335,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
 //////////////////////////////////////////////////////////////////////////////
                // qDebug()<<midPoint[j];
              }
+
+                int before_P1score = playerScore_1;
+                int before_P2score = playerScore_2;
                player = ( player + 1 ) % 2 ;
                switch (player) {
                case 0:
@@ -347,6 +350,14 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                playerline *pline = new playerline;
                pline->Set_Player_Line(x1,y1,x2,y2,player);
                scene()->addItem(pline);
+               if (before_P1score != playerScore_1)
+               {
+                   player = 1;
+               }
+               else if(before_P2score != playerScore_2)
+               {
+                   player = 0;
+               }
     }
 
     qDebug() << "score player 1:" << playerScore_1;
