@@ -243,6 +243,8 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 
 
 int BLOCK::player = 0;
+int BLOCK::playerScore_1 = 0;
+int BLOCK::playerScore_2 = 0;
 
 win BLOCK :: Generator ;
 
@@ -334,10 +336,21 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                // qDebug()<<midPoint[j];
              }
                player = ( player + 1 ) % 2 ;
+               switch (player) {
+               case 0:
+                   playerScore_1 += Generator.getPoint();
+                   break;
+               case 1:
+                   playerScore_2 += Generator.getPoint();
+                   break;
+               }
                playerline *pline = new playerline;
                pline->Set_Player_Line(x1,y1,x2,y2,player);
                scene()->addItem(pline);
     }
+
+    qDebug() << "score player 1:" << playerScore_1;
+    qDebug() << "score player 2:" << playerScore_2;
 
 }
 

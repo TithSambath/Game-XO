@@ -9,7 +9,6 @@ win::win()
     for (int i = 0 ; i < 61 ; i++)
     {
         middlePoint.append(midPoint[i]);
-        qDebug() << middlePoint.at(i);
     }
     delete[] midPoint;
 }
@@ -55,7 +54,7 @@ int win::generator(int x, int y)
                 }
                 median = x * 10000 + y ;
             }
-    qDebug() << "median = " << median;
+    //qDebug() << "median = " << median;
     return median;
 }
 
@@ -82,7 +81,7 @@ bool win::storageManager(int median)
             }
         }
     }
-    qDebug() << "manager = " << manager;
+    //qDebug() << "manager = " << manager;
     return  manager;
 }
 
@@ -100,32 +99,42 @@ int win::storageFunc(bool manager , int median)
     {
         drawing = false;
     }
-    qDebug() << "drawing = " << drawing ;
+    //qDebug() << "drawing = " << drawing ;
     return  drawing;
 }
 
 void win::completeSquareChecking(int midpoint1, int midpoint2)
 {
+    point = 0;
     for (int i = 0; i < 61; i++)
     {
         if (midpoint1 == middlePoint.at(i)/10)
         {
                middlePoint[i] = middlePoint.at(i)+1;
-               qDebug() << middlePoint.at(i);
                if (middlePoint.at(i) % 10 == 4){
-                   qDebug()<<"Complete Square.";
+                   point++;
                }
         }
         if (midpoint2 == middlePoint.at(i)/10)
         {
             middlePoint[i] = middlePoint.at(i)+1;
-            qDebug() << middlePoint.at(i);
             if (middlePoint.at(i) % 10 == 4){
-                qDebug()<<"Complete Square.";
+                point++;
             }
         }
 
     }
+
+}
+
+int win::getPoint() const
+{
+    return point;
+}
+
+void win::setPoint(int value)
+{
+    point = value;
 }
 
 
