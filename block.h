@@ -14,6 +14,7 @@ public:
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void Create_Board (QGraphicsScene * parent);
     void drawingFunc(bool drawing , int x , int y);
+    void reset();
 private:
     QGraphicsScene *add_to_scene = new QGraphicsScene;
     void DefinePlayerTurn(int CountPlayerTurn);
@@ -24,6 +25,7 @@ private:
     static int player ;// store 1 for player 1 and 2 for player 2
     static int playerScore_1;
     static int playerScore_2;
+
 
 
 

@@ -2,6 +2,8 @@
 #define GAME_H
 
 #include <QMainWindow>
+#include "block.h"
+#include "border.h"
 
 namespace Ui {
 class Game;
@@ -23,8 +25,13 @@ private slots:
 
     void on_Dual_button_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::Game *ui;
+    QGraphicsScene *Scene = new QGraphicsScene;
+    BLOCK *block = new BLOCK;
+    BORDER *border = new BORDER;
 };
 
 #endif // GAME_H

@@ -1,8 +1,5 @@
 #include "game.h"
 #include "ui_game.h"
-#include "block.h"
-#include "border.h"
-#include "playerline.h"
 
 Game::Game(QWidget *parent) :
     QMainWindow(parent),
@@ -12,11 +9,11 @@ Game::Game(QWidget *parent) :
 
     // create block:
        //Create GraphicsScene and item to scene:
-          QGraphicsScene *Scene = new QGraphicsScene;
+
           Scene->setSceneRect(0,50,850,850);// set size and coordinate of scene
 
        //Create Collect Block from :
-          BLOCK *block = new BLOCK;
+
           block->Create_Board(Scene);
 
     // create GraphicsView:
@@ -26,7 +23,7 @@ Game::Game(QWidget *parent) :
           ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     // Create Border area:
-          BORDER *border = new BORDER;
+
           border->Create_Border(Scene);
 
           //ui->Solo_Button->setStyleSheet("image: url(:/16_Player_Match_game_competition-512.png)");
@@ -57,4 +54,12 @@ void Game::on_Dual_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
     ui->Background->setStyleSheet("border-image: url(:/inside play.jpg)");
+}
+
+void Game::on_pushButton_clicked()
+{
+    Scene->clear();
+    block->Create_Board(Scene);
+    border->Create_Border(Scene);
+    block->reset();
 }
