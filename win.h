@@ -8,9 +8,9 @@ public:
     int generator (int x , int y);
     bool storageManager(int median);
     int storageFunc(bool manager , int median );
-
     //static int midPoint[60];
     void completeSquareChecking(int midpoint1 , int midpoint2);
+    void initailize();
 
     int getPoint() const;
     int receiveMidPoint1;

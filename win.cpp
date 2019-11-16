@@ -5,12 +5,10 @@ win::win()
     for (int i = 0 ; i < 44 ; i++) {
         storage.append(border[i]);
     }
-    delete[] border;
     for (int i = 0 ; i < 61 ; i++)
     {
         middlePoint.append(midPoint[i]);
     }
-    delete[] midPoint;
 }
 
 QList<int> win :: storage;
@@ -129,6 +127,19 @@ void win::completeSquareChecking(int midpoint1, int midpoint2)
 
     }
 
+}
+
+void win::initailize()
+{
+    storage.clear();
+    middlePoint.clear();
+    for (int i = 0 ; i < 44 ; i++) {
+        storage.append(border[i]);
+    }
+    for (int i = 0 ; i < 61 ; i++)
+    {
+        middlePoint.append(midPoint[i]);
+    }
 }
 
 int win::getPoint() const

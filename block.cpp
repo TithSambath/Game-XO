@@ -468,3 +468,11 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
 
 }
 
+void BLOCK::reset()
+{
+    player = 0;
+    playerScore_1 = 0;
+    playerScore_2 = 0;
+    Generator.initailize();
+}
+
