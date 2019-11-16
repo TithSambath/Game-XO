@@ -106,6 +106,8 @@ int win::storageFunc(bool manager , int median)
 void win::completeSquareChecking(int midpoint1, int midpoint2)
 {
     point = 0;
+    win::receiveMidPoint1 = 0;
+    win::receiveMidPoint2 = 0;
     for (int i = 0; i < 61; i++)
     {
         if (midpoint1 == middlePoint.at(i)/10)
@@ -113,6 +115,7 @@ void win::completeSquareChecking(int midpoint1, int midpoint2)
                middlePoint[i] = middlePoint.at(i)+1;
                if (middlePoint.at(i) % 10 == 4){
                    point++;
+                   receiveMidPoint1 = midpoint1;
                }
         }
         if (midpoint2 == middlePoint.at(i)/10)
@@ -120,6 +123,7 @@ void win::completeSquareChecking(int midpoint1, int midpoint2)
             middlePoint[i] = middlePoint.at(i)+1;
             if (middlePoint.at(i) % 10 == 4){
                 point++;
+                receiveMidPoint2 = midpoint2;
             }
         }
 
@@ -130,6 +134,16 @@ void win::completeSquareChecking(int midpoint1, int midpoint2)
 int win::getPoint() const
 {
     return point;
+}
+
+int win::getMidPoint1()
+{
+    return receiveMidPoint1;
+}
+
+int win::getMidPoint2()
+{
+    return receiveMidPoint2;
 }
 
 

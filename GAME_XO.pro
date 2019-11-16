@@ -30,6 +30,7 @@ SOURCES += \
         game.cpp \
         main.cpp \
         playerline.cpp \
+        playersymbol.cpp \
         win.cpp
 
 HEADERS += \
@@ -37,6 +38,7 @@ HEADERS += \
     border.h \
     game.h \
     playerline.h \
+    playersymbol.h \
     win.h
 
 FORMS += \

@@ -58,3 +58,5 @@ void Game::on_Dual_button_clicked()
     ui->stackedWidget->setCurrentIndex(2);
     ui->Background->setStyleSheet("border-image: url(:/inside play.jpg)");
 }
+
+

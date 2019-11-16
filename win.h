@@ -13,6 +13,10 @@ public:
     void completeSquareChecking(int midpoint1 , int midpoint2);
 
     int getPoint() const;
+    int receiveMidPoint1;
+    int receiveMidPoint2;
+    int getMidPoint1();
+    int getMidPoint2();
 
 
 private:

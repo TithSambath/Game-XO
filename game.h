@@ -23,6 +23,7 @@ private slots:
 
     void on_Dual_button_clicked();
 
+
 private:
     Ui::Game *ui;
 };

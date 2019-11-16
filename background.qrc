@@ -13,5 +13,7 @@
         <file>PvC.png</file>
         <file>QUITBUTTON.png</file>
         <file>Front background.jpg</file>
+        <file>O Player.png</file>
+        <file>X Player.png</file>
     </qresource>
 </RCC>

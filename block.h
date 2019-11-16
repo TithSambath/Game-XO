@@ -24,6 +24,8 @@ private:
     static int player ;// store 1 for player 1 and 2 for player 2
     static int playerScore_1;
     static int playerScore_2;
+    int midpointOFBlock1;
+    int midpointOFBlock2;
 
 
 

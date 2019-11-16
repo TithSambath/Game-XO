@@ -7,13 +7,14 @@
 #include <QGraphicsView>
 #include <border.h>
 #include "win.h"
+#include <QLabel>
+#include <QPixmap>
+#include "playersymbol.h"
 
 BLOCK::BLOCK()
 {
 
 }
-
-
 void BLOCK::Create_Board(QGraphicsScene *parent)
 {
     int width = 50;
@@ -340,13 +341,115 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 int before_P2score = playerScore_2;
                player = ( player + 1 ) % 2 ;
                switch (player) {
-               case 0:
+               case 0:{
                    playerScore_1 += Generator.getPoint();
-                   break;
-               case 1:
-                   playerScore_2 += Generator.getPoint();
+                   qDebug()<<"Get point = "<<Generator.getPoint();
+                   int pos_x = 0;
+                   int pos_y = 0;
+                   ///////////////////////////////////////////////
+                   if (Generator.getPoint() == 1){
+                       qDebug()<<"GREEN";
+                       qDebug()<<scene();
+                       midpointOFBlock1 = Generator.getMidPoint1();
+                       midpointOFBlock2 = Generator.getMidPoint2();
+                       qDebug()<<"Mid point of complete block 1 = "<<midpointOFBlock1;
+                       qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
+                       if (midpointOFBlock1 != 0){
+                          pos_x = (midpointOFBlock1 / 10000) - 20;
+                          pos_y = (midpointOFBlock1 % 10000) - 20;
+                          //QGraphicsScene *s = new QGraphicsScene;
+                          PlayerSymbol *Player_O = new PlayerSymbol();
+                          Player_O->player_O(scene(),pos_x,pos_y);
+                       }else if (midpointOFBlock2 != 0) {
+                           qDebug()<<"Hello";
+                           pos_x = (midpointOFBlock2 / 10000) - 20;
+                           pos_y = (midpointOFBlock2 % 10000) - 20;
+                           qDebug()<<pos_x;
+                           qDebug()<<pos_y;
+                           PlayerSymbol *Player_O = new PlayerSymbol();
+                           Player_O->player_O(scene(),pos_x,pos_y);
+                       }
+                       ///////////////////////////////////////////////////////////////
+
+                       ///////////////////////////////////////////////////////////////
+                   }else if (Generator.getPoint() == 2) {
+                       int i = 0;
+                       midpointOFBlock1 = Generator.getMidPoint1();
+                       midpointOFBlock2 = Generator.getMidPoint2();
+                       qDebug()<<"Mid point of complete block 1 = "<<midpointOFBlock1;
+                       qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
+                       while (i < 1) {
+                         qDebug()<<"GREEN";
+                         //////////////////////
+                         pos_x = (midpointOFBlock1 / 10000) - 20;
+                         pos_y = (midpointOFBlock1 % 10000) - 20;
+                         PlayerSymbol *Player_O = new PlayerSymbol();
+                         Player_O->player_O(scene(),pos_x,pos_y);
+                         /*****************************************/
+                         pos_x = (midpointOFBlock2 / 10000) - 20;
+                         pos_y = (midpointOFBlock2 % 10000) - 20;
+                         PlayerSymbol *Player_O1 = new PlayerSymbol();
+                         Player_O1->player_O(scene(),pos_x,pos_y);
+                         //////////////////////
+                         i++;
+                       }
+                   }
+                   ///////////////////////////////////////////////
                    break;
                }
+               case 1:
+               {
+                   playerScore_2 += Generator.getPoint();
+                   qDebug()<<"Get point = "<<Generator.getPoint();
+                   int pos_x = 0;
+                   int pos_y = 0;
+                   ///////////////////////////////////////////////
+                   if (Generator.getPoint() == 1){
+                       qDebug()<<"BLUE";
+                       int midpointOFBlock1 = Generator.getMidPoint1();
+                       int midpointOFBlock2 = Generator.getMidPoint2();
+                       qDebug()<<"Mid point of complete block 1 = "<<midpointOFBlock1;
+                       qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
+                       if (midpointOFBlock1 != 0){
+                          pos_x = (midpointOFBlock1 / 10000) - 20;
+                          pos_y = (midpointOFBlock1 % 10000) - 20;
+                          PlayerSymbol *Player_X = new PlayerSymbol();
+                          Player_X->player_X(scene(),pos_x,pos_y);
+                       }else if (midpointOFBlock2 != 0) {
+                           qDebug()<<"Hello";
+                           pos_x = (midpointOFBlock2 / 10000) - 20;
+                           pos_y = (midpointOFBlock2 % 10000) - 20;
+                           qDebug()<<pos_x;
+                           qDebug()<<pos_y;
+                           PlayerSymbol *Player_X = new PlayerSymbol();
+                           Player_X->player_X(scene(),pos_x,pos_y);
+                       }
+                   }else if (Generator.getPoint() == 2) {
+                       int i = 0;
+                       int midpointOFBlock1 = Generator.getMidPoint1();
+                       int midpointOFBlock2 = Generator.getMidPoint2();
+                       qDebug()<<"Mid point of complete block 1 = "<<midpointOFBlock1;
+                       qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
+                       while (i < 2) {
+                         qDebug()<<"BLUE";
+                         //////////////////////
+                         pos_x = (midpointOFBlock1 / 10000) - 20;
+                         pos_y = (midpointOFBlock1 % 10000) - 20;
+                         PlayerSymbol *Player_X = new PlayerSymbol();
+                         Player_X->player_X(scene(),pos_x,pos_y);
+                         /*****************************************/
+                         pos_x = (midpointOFBlock2 / 10000) - 20;
+                         pos_y = (midpointOFBlock2 % 10000) - 20;
+                         PlayerSymbol *Player_X1 = new PlayerSymbol();
+                         Player_X1->player_X(scene(),pos_x,pos_y);
+                         /////////////////////
+                         i++;
+                       }
+                   }
+                   ///////////////////////////////////////////////
+                   break;
+               }
+           }
                playerline *pline = new playerline;
                pline->Set_Player_Line(x1,y1,x2,y2,player);
                scene()->addItem(pline);
