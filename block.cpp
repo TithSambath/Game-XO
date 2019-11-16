@@ -19,6 +19,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 {
     int width = 50;
     int height = 50;
+    QThread delay;
     // Middle block: known as center coordinated.
         BLOCK *Mblock = new BLOCK;
         Mblock->setRect(0,0,width,height);
@@ -35,6 +36,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             LBlock->setRect(0,0,50,50);
             LBlock->setPos(400+j,400);
             parent->addItem(LBlock);
+
         }
         //dfadfdsfasdfdsfadsfdfdfsad
     // Mdown block:
@@ -475,4 +477,6 @@ void BLOCK::reset()
     playerScore_2 = 0;
     Generator.initailize();
 }
+
+
 

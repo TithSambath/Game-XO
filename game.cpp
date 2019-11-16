@@ -9,8 +9,7 @@ Game::Game(QWidget *parent) :
     //Create GraphicsScene and item to scene:
           Scene->setSceneRect(0,50,850,850);// set size and coordinate of scene
     // draw block and its border:
-          block->Create_Board(Scene);
-          border->Create_Border(Scene);
+
     // create GraphicsView:
           ui->view->setScene(Scene);
           ui->view->setFixedSize(850,850);
@@ -29,6 +28,8 @@ Game::~Game()
 void Game::on_PLAY_BUTTON_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
+    block->Create_Board(Scene);
+    border->Create_Border(Scene);
 }
 
 
@@ -44,7 +45,8 @@ void Game::on_pushButton_clicked()// reset button
 void Game::on_option_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
-    ui->Background->setStyleSheet("border-image: url(:/tee.png)");
+    border->Create_Border(Scene);
+    block->Create_Board(Scene);
 }
 
 
