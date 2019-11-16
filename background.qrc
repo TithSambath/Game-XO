@@ -13,5 +13,17 @@
         <file>PvC.png</file>
         <file>QUITBUTTON.png</file>
         <file>Front background.jpg</file>
+        <file>start button.png</file>
+        <file>option button.png</file>
+        <file>quit button.png</file>
+        <file>backgroung1.png</file>
+        <file>option back.png</file>
+        <file>back buttton.png</file>
+        <file>back of button.png</file>
+        <file>option back1.png</file>
+        <file>Asset 5.png</file>
+        <file>music.png</file>
+        <file>SOUND.png</file>
+        <file>tee.png</file>
     </qresource>
 </RCC>

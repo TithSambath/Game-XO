@@ -20,12 +20,15 @@ public:
 private slots:
     void on_PLAY_BUTTON_3_clicked();
 
-
-    void on_Solo_Button_clicked();
-
-    void on_Dual_button_clicked();
-
     void on_pushButton_clicked();
+
+    void on_option_button_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_back_button_clicked();
+
+    void on_horizontalSlider_sliderMoved(int position);
 
 private:
     Ui::Game *ui;
