@@ -1,31 +1,17 @@
 <RCC>
     <qresource prefix="/Image"/>
     <qresource prefix="/">
-        <file>16_Player_Match_game_competition-512.png</file>
-        <file>back-button-icon.jpg</file>
-        <file>PlayervsPlayer-2.png</file>
-        <file>Player vs Player 3.png</file>
-        <file>N7rdJZ.jpg</file>
-        <file>1600x500-blank-png.png</file>
-        <file>background of interface .jpg</file>
-        <file>inside play.jpg</file>
-        <file>PvP.png</file>
-        <file>PvC.png</file>
-        <file>QUITBUTTON.png</file>
-        <file>Front background.jpg</file>
         <file>start button.png</file>
         <file>option button.png</file>
         <file>O Player.png</file>
         <file>X Player.png</file>
         <file>quit button.png</file>
         <file>backgroung1.png</file>
-        <file>option back.png</file>
         <file>back buttton.png</file>
         <file>back of button.png</file>
-        <file>option back1.png</file>
-        <file>Asset 5.png</file>
         <file>music.png</file>
         <file>SOUND.png</file>
         <file>tee.png</file>
+        <file>1600x500-blank-png.png</file>
     </qresource>
 </RCC>

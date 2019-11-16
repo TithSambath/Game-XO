@@ -14,11 +14,14 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image: url(:/backgroung1.png);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="Background">
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
    <property name="styleSheet">
-    <string notr="true"/>
+    <string notr="true">border-image: url(:/backgroung1.png);</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -30,7 +33,7 @@
        <string notr="true">border-image: url(:/1600x500-blank-png.png);</string>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
@@ -54,6 +57,9 @@
               </property>
               <item>
                <widget class="QPushButton" name="PLAY_BUTTON_3">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
                   <horstretch>0</horstretch>
@@ -70,6 +76,9 @@
                 </property>
                 <property name="mouseTracking">
                  <bool>false</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
                 </property>
                 <property name="autoFillBackground">
                  <bool>false</bool>
@@ -108,6 +117,9 @@ QPushButton:hover {image: url(:/start button.png);border-width: 5%}
                   <verstretch>0</verstretch>
                  </sizepolicy>
                 </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton
 {
@@ -133,6 +145,9 @@ QPushButton:hover {image: url(:/option button.png);border-width: 5%}</string>
                   <family>Cooper Black</family>
                   <pointsize>25</pointsize>
                  </font>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
                 </property>
                 <property name="styleSheet">
                  <string notr="true">QPushButton
@@ -233,7 +248,7 @@ QPushButton:hover {image: url(:/quit button.png);border-width: 5%}</string>
         <item row="1" column="1">
          <widget class="QGraphicsView" name="view">
           <property name="styleSheet">
-           <string notr="true">background-color: rgba(0,0,0,0);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -267,7 +282,7 @@ QPushButton:hover {image: url(:/quit button.png);border-width: 5%}</string>
       </widget>
       <widget class="QWidget" name="page_4">
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/tee.png);
+        <string notr="true">
 
 </string>
        </property>
@@ -504,13 +519,16 @@ QPushButton:hover {image: url(:/quit button.png);border-width: 5%}</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton
-{
-border-image: url(:/1600x500-blank-png.png);
-image: url(:/back of button.png);max-width: 512px;max-height: 512px;
+             <string notr="true">QPushButton{
+	image: url(:/back of button.png);
+	max-width: 512px;
+	max-height: 512px;
 
 }
-QPushButton:hover {image: url(:/back of button.png);border-width: 5%}
+QPushButton:hover{
+	image: url(:/back of button.png);
+	border-width: 5%
+}
 
 </string>
             </property>
@@ -535,8 +553,7 @@ QPushButton:hover {image: url(:/back of button.png);border-width: 5%}
           <item row="3" column="3">
            <widget class="QLabel" name="label">
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png.png);
-image: url(:/music.png);</string>
+             <string notr="true">image: url(:/music.png);</string>
             </property>
             <property name="text">
              <string/>
@@ -546,8 +563,7 @@ image: url(:/music.png);</string>
           <item row="5" column="3">
            <widget class="QLabel" name="label_2">
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png.png);
-image: url(:/SOUND.png);</string>
+             <string notr="true">image: url(:/SOUND.png);</string>
             </property>
             <property name="text">
              <string/>
@@ -557,7 +573,7 @@ image: url(:/SOUND.png);</string>
           <item row="3" column="4">
            <widget class="QSlider" name="horizontalSlider">
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png.png);</string>
+             <string notr="true"/>
             </property>
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -573,8 +589,7 @@ image: url(:/SOUND.png);</string>
              </sizepolicy>
             </property>
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png.png);
-QpushButton
+             <string notr="true">QpushButton
 {
 	max-width: 512px;max-height: 512px;
 }</string>

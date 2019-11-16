@@ -6,20 +6,17 @@ Game::Game(QWidget *parent) :
     ui(new Ui::Game)
 {
     ui->setupUi(this);
-
-    // create block:
     //Create GraphicsScene and item to scene:
           Scene->setSceneRect(0,50,850,850);// set size and coordinate of scene
-    //Create Collect Block from :
+    // draw block and its border:
+          block->Create_Board(Scene);
+          border->Create_Border(Scene);
     // create GraphicsView:
           ui->view->setScene(Scene);
           ui->view->setFixedSize(850,850);
     // remove scrollbars:
           ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-    // Create Border area:
-     //ui->Solo_Button->setStyleSheet("image: url(:/16_Player_Match_game_competition-512.png)");
-
 }
 
 Game::~Game()
@@ -32,14 +29,11 @@ Game::~Game()
 void Game::on_PLAY_BUTTON_3_clicked()
 {
     ui->stackedWidget->setCurrentIndex(1);
-    ui->Background->setStyleSheet("border-image: url(:/interface background.jpg)");
-    block->Create_Board(Scene);
-    border->Create_Border(Scene);
 }
 
 
 
-void Game::on_pushButton_clicked()
+void Game::on_pushButton_clicked()// reset button
 {
     Scene->clear();
     block->Create_Board(Scene);
@@ -50,17 +44,19 @@ void Game::on_pushButton_clicked()
 void Game::on_option_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+    ui->Background->setStyleSheet("border-image: url(:/tee.png)");
 }
 
 
 void Game::on_back_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    ui->Background->setStyleSheet("border-image: url(:/backgroung1.png)");
 }
-
+/*
 void Game::on_horizontalSlider_sliderMoved(int position)
 {
 
 }
-
+*/
 
