@@ -14,14 +14,14 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">border-image: url(:/backgroung1.png);</string>
   </property>
   <widget class="QWidget" name="Background">
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/backgroung1.png);</string>
+    <string notr="true"/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -30,12 +30,15 @@
        <bool>true</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">border-image: url(:/backgroung1.png);</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
       <widget class="QWidget" name="page">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <layout class="QGridLayout" name="gridLayout_6">
         <item row="1" column="0">
          <spacer name="horizontalSpacer_2">
@@ -240,6 +243,9 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 5%}</strin
        </layout>
       </widget>
       <widget class="QWidget" name="page_3">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="3">
          <widget class="QPushButton" name="pushButton">

@@ -257,7 +257,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     // Drawing sound:
        drawingSound = new QMediaPlayer;
        drawingSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/drawing line.wav"));
-       drawingSound->play();
+
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
     int median;
@@ -265,6 +265,10 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     median = Generator.generator(x,y);
     manager = Generator.storageManager(median) ;
     drawing = Generator.storageFunc(manager , median );
+    if(manager)
+    {
+        drawingSound->play();
+    }
     drawingFunc(drawing , x , y);
 
 
