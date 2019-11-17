@@ -8,9 +8,10 @@ BORDER::BORDER()
 {
 
 }
-win squarecheck;
+
 void BORDER::Create_Border(QGraphicsScene *Parent)
 {
+    win squarecheck;
     int i;
     // create border area:
         int incrementlater = 0;

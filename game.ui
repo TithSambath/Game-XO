@@ -33,10 +33,26 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <layout class="QGridLayout" name="gridLayout_6">
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item row="1" column="2">
          <spacer name="horizontalSpacer">
           <property name="orientation">
@@ -102,6 +118,9 @@
                   <weight>50</weight>
                   <bold>false</bold>
                  </font>
+                </property>
+                <property name="cursor">
+                 <cursorShape>ArrowCursor</cursorShape>
                 </property>
                 <property name="mouseTracking">
                  <bool>false</bool>
@@ -202,18 +221,18 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 5%}</strin
           </item>
          </layout>
         </item>
-        <item row="1" column="0">
-         <spacer name="horizontalSpacer_2">
+        <item row="2" column="1">
+         <spacer name="verticalSpacer_2">
           <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+           <enum>Qt::Vertical</enum>
           </property>
           <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
+           <enum>QSizePolicy::Maximum</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>40</width>
-            <height>20</height>
+            <width>20</width>
+            <height>120</height>
            </size>
           </property>
          </spacer>
