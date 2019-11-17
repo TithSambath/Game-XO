@@ -8,7 +8,6 @@ Game::Game(QWidget *parent) :
     ui->setupUi(this);
     //Create GraphicsScene and item to scene:
           Scene->setSceneRect(0,50,850,850);// set size and coordinate of scene
-
           Scene->setBackgroundBrush(QBrush(QColor(255,255,255,255/2)));
     // draw block and its border:
 
@@ -39,9 +38,10 @@ void Game::on_PLAY_BUTTON_3_clicked()
 void Game::on_pushButton_clicked()// reset button
 {
     Scene->clear();
+    block->reset();
     block->Create_Board(Scene);
     border->Create_Border(Scene);
-    block->reset();
+
 }
 
 void Game::on_option_button_clicked()
