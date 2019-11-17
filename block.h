@@ -7,7 +7,7 @@
 #include <QGraphicsView>
 #include "win.h"
 #include <QThread>
-
+#include <QMediaPlayer>
 class BLOCK :public QGraphicsRectItem
 {
 public:
@@ -28,6 +28,7 @@ private:
     static int playerScore_2;
     int midpointOFBlock1;
     int midpointOFBlock2;
+    QMediaPlayer *drawingSound;
 
 
 

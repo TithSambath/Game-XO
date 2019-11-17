@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "block.h"
 #include "border.h"
+#include <QMediaPlayer>
 
 namespace Ui {
 class Game;
@@ -34,6 +35,8 @@ private:
     QGraphicsScene *Scene = new QGraphicsScene;
     BLOCK *block = new BLOCK;
     BORDER *border = new BORDER;
+    QMediaPlayer *GameSound;
+    QMediaPlayer *MouseClickSound;
 };
 
 #endif // GAME_H

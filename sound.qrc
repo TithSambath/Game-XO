@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/Sound EFFECT">
+        <file>Game Sound/drawing line.wav</file>
+        <file>Game Sound/Intro game.mp3</file>
+        <file>Game Sound/Mouse Click - Sound Effect _HD_.mp3</file>
+    </qresource>
+</RCC>

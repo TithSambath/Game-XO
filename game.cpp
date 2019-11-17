@@ -1,5 +1,6 @@
 #include "game.h"
 #include "ui_game.h"
+#include <QtMultimedia/QMediaPlayer>
 
 Game::Game(QWidget *parent) :
     QMainWindow(parent),
@@ -17,6 +18,10 @@ Game::Game(QWidget *parent) :
     // remove scrollbars:
           ui->view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
           ui->view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // Play game sound
+          GameSound = new QMediaPlayer(this);
+          GameSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/Intro game.mp3"));
+          GameSound->play();
 }
 
 Game::~Game()
@@ -31,6 +36,8 @@ void Game::on_PLAY_BUTTON_3_clicked()
     ui->stackedWidget->setCurrentIndex(1);
     block->Create_Board(Scene);
     border->Create_Border(Scene);
+    GameSound->stop();
+
 }
 
 
@@ -41,9 +48,7 @@ void Game::on_pushButton_clicked()// reset button
     block->reset();
     block->Create_Board(Scene);
     border->Create_Border(Scene);
-
 }
-
 void Game::on_option_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
