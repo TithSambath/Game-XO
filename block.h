@@ -6,6 +6,7 @@
 #include <QObject>
 #include <QGraphicsView>
 #include "win.h"
+#include <QThread>
 
 class BLOCK :public QGraphicsRectItem
 {
@@ -27,6 +28,7 @@ private:
     static int playerScore_2;
     int midpointOFBlock1;
     int midpointOFBlock2;
+
 
 
 

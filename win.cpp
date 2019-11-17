@@ -2,13 +2,7 @@
 #include <QDebug>
 win::win()
 {
-    for (int i = 0 ; i < 44 ; i++) {
-        storage.append(border[i]);
-    }
-    for (int i = 0 ; i < 61 ; i++)
-    {
-        middlePoint.append(midPoint[i]);
-    }
+    initailize();
 }
 
 QList<int> win :: storage;
