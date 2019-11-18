@@ -62,10 +62,5 @@ void Game::on_back_button_clicked()
     ui->stackedWidget->setCurrentIndex(0);
     ui->Background->setStyleSheet("border-image: url(:/backgroung1.png)");
 }
-/*
-void Game::on_horizontalSlider_sliderMoved(int position)
-{
 
-}
-*/
 
