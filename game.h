@@ -21,7 +21,7 @@ public:
 private slots:
     void on_PLAY_BUTTON_3_clicked();
 
-    void on_pushButton_clicked();
+    void on_reset_clicked();
 
     void on_option_button_clicked();
 
@@ -29,6 +29,8 @@ private slots:
 
     //void on_horizontalSlider_sliderMoved(int position);
 
+
+    void on_HomeButton_clicked();
 
 private:
     Ui::Game *ui;
