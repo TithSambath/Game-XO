@@ -6,6 +6,7 @@ Game::Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Game)
 {
+
     ui->setupUi(this);
     //Create GraphicsScene and item to scene:
           Scene->setSceneRect(0,100,850,850);// set size and coordinate of scene
@@ -21,6 +22,11 @@ Game::Game(QWidget *parent) :
           GameSound = new QMediaPlayer(this);
           GameSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/Intro game.mp3"));
           GameSound->play();
+
+          ui->label_4->setText("TOTAL SCORE: ");
+
+
+
 }
 
 Game::~Game()
@@ -43,7 +49,7 @@ void Game::on_PLAY_BUTTON_3_clicked()
 
 void Game::on_reset_clicked()// reset button
 {
-
+    Scene->clear();
     block->Create_Board(Scene);
     border->Create_Border(Scene);
 }
@@ -57,7 +63,6 @@ void Game::on_option_button_clicked()
 void Game::on_back_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
-    ui->Background->setStyleSheet("border-image: url(:/backgroung1.png)");
 }
 
 
@@ -68,3 +73,16 @@ void Game::on_HomeButton_clicked()
     block->reset();
     ui->stackedWidget->setCurrentIndex(0);
 }
+
+void Game::on_Music_Pause_clicked()
+{
+    Pause_Music += 1;
+    if (Pause_Music % 2 == 0){
+        GameSound->stop();
+        ui->Music_Pause->setStyleSheet("border-image: url(:/check Boxs.png);");
+    }else {
+        GameSound->play();
+        ui->Music_Pause->setStyleSheet("border-image: url(:/complete check.png);");
+    }
+}
+

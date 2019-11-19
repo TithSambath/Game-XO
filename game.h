@@ -32,6 +32,10 @@ private slots:
 
     void on_HomeButton_clicked();
 
+    void on_Music_Pause_clicked();
+
+    //void on_Sound_Pause_clicked();
+
 private:
     Ui::Game *ui;
     QGraphicsScene *Scene = new QGraphicsScene;
@@ -39,6 +43,8 @@ private:
     BORDER *border = new BORDER;
     QMediaPlayer *GameSound;
     QMediaPlayer *MouseClickSound;
+    int Pause_Music = 1;
+    int Pause_Sound = 1;
 };
 
 #endif // GAME_H
