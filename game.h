@@ -29,8 +29,9 @@ private slots:
 
     //void on_horizontalSlider_sliderMoved(int position);
 
-
     void on_HomeButton_clicked();
+
+    void displayHello();
 
 private:
     Ui::Game *ui;

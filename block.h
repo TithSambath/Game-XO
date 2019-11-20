@@ -8,14 +8,18 @@
 #include "win.h"
 #include <QThread>
 #include <QMediaPlayer>
-class BLOCK :public QGraphicsRectItem
+class BLOCK : public QObject,public QGraphicsRectItem
 {
+    Q_OBJECT
 public:
     BLOCK();
     void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void Create_Board (QGraphicsScene * parent);
     void drawingFunc(bool drawing , int x , int y);
     void reset();
+public: signals:
+    void setScorePlayer1(int);
+    void setScorePlayer2(int);
 private:
     QGraphicsScene *add_to_scene = new QGraphicsScene;
     void DefinePlayerTurn(int CountPlayerTurn);

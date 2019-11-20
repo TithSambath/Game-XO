@@ -531,7 +531,13 @@ color: rgb(0, 0, 127);</string>
              <string>TextLabel</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="indent">
+             <number>0</number>
             </property>
            </widget>
           </item>
@@ -617,6 +623,12 @@ color: rgb(255, 0, 0);</string>
             <property name="text">
              <string>TextLabel</string>
             </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="indent">
+             <number>0</number>
+            </property>
            </widget>
           </item>
           <item>
@@ -646,7 +658,8 @@ color: rgb(255, 0, 0);</string>
         <item row="1" column="2">
          <widget class="QGraphicsView" name="view">
           <property name="styleSheet">
-           <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);</string>
+           <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);
+</string>
           </property>
          </widget>
         </item>

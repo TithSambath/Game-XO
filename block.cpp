@@ -270,9 +270,10 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
         drawingSound->play();
     }
     drawingFunc(drawing , x , y);
-
-
+    emit this->setScorePlayer1(playerScore_1);
+    emit this->setScorePlayer2(playerScore_2);
 }
+
 /*
 int BLOCK::midPoint[61] =  {42504250,47504250,52504250,57504250,62504250,67504250,42504750,42505250,
                             42505750,42506250,42506750,42503750,42503250,42502750,42502250,42501750,
@@ -353,7 +354,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                player = ( player + 1 ) % 2 ;
                switch (player) {
                case 0:{
+
                    playerScore_1 += Generator.getPoint();
+
                    qDebug()<<"Get point = "<<Generator.getPoint();
                    int pos_x = 0;
                    int pos_y = 0;
@@ -410,7 +413,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                }
                case 1:
                {
+
                    playerScore_2 += Generator.getPoint();
+
                    qDebug()<<"Get point = "<<Generator.getPoint();
                    int pos_x = 0;
                    int pos_y = 0;
@@ -476,6 +481,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
 
     qDebug() << "score player 1:" << playerScore_1;
     qDebug() << "score player 2:" << playerScore_2;
+
 
 }
 

@@ -21,6 +21,13 @@ Game::Game(QWidget *parent) :
           GameSound = new QMediaPlayer(this);
           GameSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/Intro game.mp3"));
           GameSound->play();
+         connect(block,SIGNAL(setScorePlayer1(int)),ui->label_4,SLOT(setNum(int)));
+         connect(block,SIGNAL(setScorePlayer2(int)),ui->label_8,SLOT(setNum(int)));
+         //connect(block,SIGNAL(setScorePlayer1()),this,SLOT(displayHello()));
+         //connect(block,SIGNAL(setScorePlayer2()),this,SLOT(displayHello()));
+         //connect(block,block::setScorePlayer1(),this,SLOT(displayHello()));
+          QCursor cursorTarget = QCursor(QPixmap(":/Layer 0.png"),0,45);
+          ui->view->setCursor(cursorTarget);
 }
 
 Game::~Game()
@@ -67,4 +74,9 @@ void Game::on_HomeButton_clicked()
     Scene->clear();
     block->reset();
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void Game::displayHello()
+{
+    qDebug() << "hello hahahha";
 }
