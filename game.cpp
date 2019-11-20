@@ -25,15 +25,16 @@ Game::Game(QWidget *parent) :
 
           ui->label_4->setText("TOTAL SCORE: ");
 
-
-
-         connect(block,SIGNAL(setScorePlayer1(int)),ui->label_4,SLOT(setNum(int)));
-         connect(block,SIGNAL(setScorePlayer2(int)),ui->label_8,SLOT(setNum(int)));
+         //connect(block,SIGNAL(setScorePlayer1(int)),ui->label_4,SLOT(setNum(int)));
+        // connect(block,SIGNAL(setScorePlayer2(int)),ui->label_8,SLOT(setNum(int)));
          //connect(block,SIGNAL(setScorePlayer1()),this,SLOT(displayHello()));
          //connect(block,SIGNAL(setScorePlayer2()),this,SLOT(displayHello()));
          //connect(block,block::setScorePlayer1(),this,SLOT(displayHello()));
-          QCursor cursorTarget = QCursor(QPixmap(":/Layer 0.png"),0,45);
-          ui->view->setCursor(cursorTarget);
+          QCursor pen = QCursor(QPixmap(":/Layer 0.png"),0,45);
+          QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);
+          ui->view->setCursor(pen);
+          ui->stackedWidget->setCursor(click);
+          ui->PLAY_BUTTON_3->setCursor(click);
 }
 
 Game::~Game()

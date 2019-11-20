@@ -51,7 +51,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="styleSheet">
@@ -172,7 +172,7 @@
 {
 border-image: url(:/start button.png);max-width: 244px;max-height: 81px;
 }
-QPushButton:hover {border-image: url(:/start button.png);border-width: 5%}
+QPushButton:hover {border-image: url(:/start button.png);border-width: 20%}
 
 </string>
                 </property>
@@ -209,7 +209,7 @@ QPushButton:hover {border-image: url(:/start button.png);border-width: 5%}
 {
 border-image: url(:/option button.png);max-width: 244px;max-height: 81px;
 }
-QPushButton:hover {border-image: url(:/option button.png);border-width: 5%}</string>
+QPushButton:hover {border-image: url(:/option button.png);border-width: 20%}</string>
                 </property>
                 <property name="text">
                  <string/>
@@ -238,7 +238,7 @@ QPushButton:hover {border-image: url(:/option button.png);border-width: 5%}</str
 {
 border-image: url(:/quit button.png);max-width: 244px;max-height: 81px;
 }
-QPushButton:hover {border-image: url(:/quit button.png);border-width: 5%}</string>
+QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</string>
                 </property>
                 <property name="text">
                  <string/>
