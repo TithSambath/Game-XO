@@ -33,10 +33,14 @@ private slots:
 
     void on_Music_Pause_clicked();
 
-    //void on_Sound_Pause_clicked();
+    void display();
+
 
 private:
     Ui::Game *ui;
+    QTimer *time ;
+    QCursor pen_Blue = QCursor(QPixmap(":/Layer 0.png"),0,45);
+    QCursor pen_Red = QCursor(QPixmap(":/red pencil.png"),0,45);
     QGraphicsScene *Scene = new QGraphicsScene;
     BLOCK *block = new BLOCK;
     BORDER *border = new BORDER;

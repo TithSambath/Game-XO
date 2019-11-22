@@ -51,7 +51,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="styleSheet">
@@ -526,7 +526,8 @@ color: rgb(0, 0, 127);</string>
             </property>
             <property name="font">
              <font>
-              <pointsize>10</pointsize>
+              <family>Tw Cen MT Condensed Extra Bold</family>
+              <pointsize>36</pointsize>
               <weight>50</weight>
               <bold>false</bold>
              </font>
@@ -626,6 +627,14 @@ color: rgb(255, 0, 0);</string>
               <width>150</width>
               <height>150</height>
              </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Yu Gothic UI Semibold</family>
+              <pointsize>36</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
             </property>
             <property name="acceptDrops">
              <bool>false</bool>
@@ -1097,12 +1106,12 @@ QPushButton:hover{
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>513</x>
-     <y>536</y>
+     <x>431</x>
+     <y>513</y>
     </hint>
     <hint type="destinationlabel">
-     <x>432</x>
-     <y>838</y>
+     <x>443</x>
+     <y>629</y>
     </hint>
    </hints>
   </connection>

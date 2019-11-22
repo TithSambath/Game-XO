@@ -492,5 +492,20 @@ void BLOCK::reset()
     Generator.initailize();
 }
 
+int BLOCK::getPlayerScore_1()
+{
+    return playerScore_1;
+}
+
+int BLOCK::getPlayerScore_2()
+{
+    return playerScore_2;
+}
+
+int BLOCK::getPlayer()
+{
+    return player;
+}
+
 
 
