@@ -1,4 +1,4 @@
-#include "playersymbol.h"
+ #include "playersymbol.h"
 #include "win.h"
 #include <QGraphicsPixmapItem>
 #include <QDebug>
