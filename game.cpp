@@ -1,13 +1,15 @@
 #include "game.h"
 #include "ui_game.h"
 #include <QtMultimedia/QMediaPlayer>
-
+#include <QtCore>
 Game::Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Game)
+
 {
 
     ui->setupUi(this);
+    time = new QTimer(this);
     //Create GraphicsScene and item to scene:
           Scene->setSceneRect(0,100,850,850);// set size and coordinate of scene
     // draw block and its border:
@@ -25,14 +27,9 @@ Game::Game(QWidget *parent) :
 
           ui->label_4->setText("TOTAL SCORE: ");
 
-         //connect(block,SIGNAL(setScorePlayer1(int)),ui->label_4,SLOT(setNum(int)));
-        // connect(block,SIGNAL(setScorePlayer2(int)),ui->label_8,SLOT(setNum(int)));
-         //connect(block,SIGNAL(setScorePlayer1()),this,SLOT(displayHello()));
-         //connect(block,SIGNAL(setScorePlayer2()),this,SLOT(displayHello()));
-         //connect(block,block::setScorePlayer1(),this,SLOT(displayHello()));
-          QCursor pen = QCursor(QPixmap(":/Layer 0.png"),0,45);
-          QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);
-          ui->view->setCursor(pen);
+          connect(time,SIGNAL(timeout()),this,SLOT(display()));
+          time->start(100);
+          QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);   
           ui->stackedWidget->setCursor(click);
           ui->PLAY_BUTTON_3->setCursor(click);
 }
@@ -58,8 +55,11 @@ void Game::on_PLAY_BUTTON_3_clicked()
 void Game::on_reset_clicked()// reset button
 {
     Scene->clear();
+    block->reset();
     block->Create_Board(Scene);
     border->Create_Border(Scene);
+    ui->label_4->setNum(block->getPlayerScore_2());
+    ui->label_8->setNum(block->getPlayerScore_1());
 }
 void Game::on_option_button_clicked()
 {
@@ -93,6 +93,21 @@ void Game::on_Music_Pause_clicked()
     }else {
         GameSound->play();
         ui->Music_Pause->setStyleSheet("border-image: url(:/complete check.png);");
+    }
+}
+
+void Game::display()
+{
+    ui->label_4->setNum(block->getPlayerScore_2());
+    ui->label_8->setNum(block->getPlayerScore_1());
+    switch (block->getPlayer()) {
+        case 0:
+        ui->view->setCursor(pen_Blue);
+        break;
+        case 1:
+        ui->view->setCursor(pen_Red);
+        break;
+
     }
 }
 

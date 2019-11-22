@@ -16,10 +16,13 @@ public:
     void Create_Board (QGraphicsScene * parent);
     void drawingFunc(bool drawing , int x , int y);
     void reset();
-signals:
-    void setScorePlayer1(int);
-    void setScorePlayer2(int);
-private: 
+    static int getPlayerScore_1();
+
+    static int getPlayerScore_2();
+
+    static int getPlayer();
+
+private:
     QGraphicsScene *add_to_scene = new QGraphicsScene;
     void DefinePlayerTurn(int CountPlayerTurn);
     int x;
