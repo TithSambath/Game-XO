@@ -451,11 +451,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                // Generate Winner Score:(create function and add delay).
                if (playerScore_1 + playerScore_2 == 61){
                    if (playerScore_1 > playerScore_2){
-                       Winner *WinnerScoreWiget = new Winner;
                        WinnerScoreWiget->setscore(playerScore_1); // PLAYER 1 IS O
                        WinnerScoreWiget->show();
                    }else {
-                       Winner *WinnerScoreWiget = new Winner;
                        WinnerScoreWiget->setscore(playerScore_2); // PLAYER 2 IS X
                        WinnerScoreWiget->show();
                    }
@@ -474,6 +472,21 @@ void BLOCK::reset()
     playerScore_1 = 0;
     playerScore_2 = 0;
     Generator.initailize();
+}
+
+int BLOCK::getPlayerScore_1()
+{
+    return playerScore_1;
+}
+
+int BLOCK::getPlayerScore_2()
+{
+    return playerScore_2;
+}
+
+int BLOCK::getPlayer()
+{
+    return player;
 }
 
 
