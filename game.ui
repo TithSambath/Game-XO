@@ -341,21 +341,27 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
             <property name="enabled">
              <bool>true</bool>
             </property>
+            <property name="minimumSize">
+             <size>
+              <width>60</width>
+              <height>60</height>
+             </size>
+            </property>
             <property name="maximumSize">
              <size>
-              <width>62</width>
-              <height>62</height>
+              <width>60</width>
+              <height>60</height>
              </size>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	border-image: url(:/Home Button.png);
+	border-image: url(:/Back Home.png);
 	max-width: 60px;
 	max-height: 60px;
 
 }
 QPushButton:hover{
-	border-image: url(:/Home Button.png);
+	border-image: url(:/Back Home.png);
 	border-width:  5%
 }</string>
             </property>
@@ -393,14 +399,14 @@ QPushButton:hover{
            <widget class="QPushButton" name="reset">
             <property name="minimumSize">
              <size>
-              <width>70</width>
-              <height>70</height>
+              <width>60</width>
+              <height>60</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>70</width>
-              <height>70</height>
+              <width>60</width>
+              <height>60</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -437,25 +443,25 @@ QPushButton:hover{
            <widget class="QPushButton" name="pushbuton">
             <property name="minimumSize">
              <size>
-              <width>70</width>
-              <height>70</height>
+              <width>60</width>
+              <height>60</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>62</width>
-              <height>62</height>
+              <width>60</width>
+              <height>60</height>
              </size>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	border-image: url(:/back of button.png);
+	border-image: url(:/exit.png);
 	max-width: 60px;
 	max-height: 60px;
 
 }
 QPushButton:hover{
-	border-image: url(:/back of button.png);
+	border-image: url(:/exit.png);
 	border-width:  5%
 }</string>
             </property>

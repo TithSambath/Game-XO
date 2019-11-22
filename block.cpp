@@ -448,7 +448,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                    player = 0;
                }
 
-               // Generate Winner Score:
+               // Generate Winner Score:(create function and add delay).
                if (playerScore_1 + playerScore_2 == 61){
                    if (playerScore_1 > playerScore_2){
                        Winner *WinnerScoreWiget = new Winner;
