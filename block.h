@@ -37,7 +37,6 @@ private:
     // create Media:
     QMediaPlayer *drawingSound = new QMediaPlayer;
     // create winner widget:
-    Winner *WinnerScoreWiget = new Winner;
 
 
 
