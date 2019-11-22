@@ -22,14 +22,7 @@ Game::Game(QWidget *parent) :
           GameSound = new QMediaPlayer(this);
           GameSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/Intro game.mp3"));
           GameSound->play();
-
-          ui->label_4->setText("TOTAL SCORE: ");
-
-         //connect(block,SIGNAL(setScorePlayer1(int)),ui->label_4,SLOT(setNum(int)));
-        // connect(block,SIGNAL(setScorePlayer2(int)),ui->label_8,SLOT(setNum(int)));
-         //connect(block,SIGNAL(setScorePlayer1()),this,SLOT(displayHello()));
-         //connect(block,SIGNAL(setScorePlayer2()),this,SLOT(displayHello()));
-         //connect(block,block::setScorePlayer1(),this,SLOT(displayHello()));
+    // Change cursor pixmap:
           QCursor pen = QCursor(QPixmap(":/Layer 0.png"),0,45);
           QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);
           ui->view->setCursor(pen);
@@ -42,7 +35,7 @@ Game::~Game()
     delete ui;
 }
 
-// game.ui part:
+// Ui.game code:
 
 void Game::on_PLAY_BUTTON_3_clicked()
 {
@@ -50,10 +43,7 @@ void Game::on_PLAY_BUTTON_3_clicked()
     block->Create_Board(Scene);
     border->Create_Border(Scene);
     GameSound->stop();
-
 }
-
-
 
 void Game::on_reset_clicked()// reset button
 {
@@ -73,16 +63,12 @@ void Game::on_back_button_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-
-
 void Game::on_HomeButton_clicked()
 {
     Scene->clear();
     block->reset();
     ui->stackedWidget->setCurrentIndex(0);
 }
-
-
 
 void Game::on_Music_Pause_clicked()
 {

@@ -38,7 +38,6 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             parent->addItem(LBlock);
 
         }
-        //dfadfdsfasdfdsfadsfdfdfsad
     // Mdown block:
     i = 0;
     j = 0;
@@ -256,7 +255,6 @@ win BLOCK :: Generator ;
 
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    // Drawing sound:
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
     int median;
@@ -266,7 +264,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     drawing = Generator.storageFunc(manager , median );
     if(manager)
     {
-
+        // Drawing sound:
         drawingSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/drawing line.wav"));
         drawingSound->play();
     }
@@ -274,17 +272,6 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
 }
 
-/*
-int BLOCK::midPoint[61] =  {42504250,47504250,52504250,57504250,62504250,67504250,42504750,42505250,
-                            42505750,42506250,42506750,42503750,42503250,42502750,42502250,42501750,
-                            37504250,32504250,27504250,22504250,17504250,37503750,37503250,37502750,
-                            37502250,32503750,32503250,32502750,27503750,27503250,22503750,37504750,
-                            37505250,37505750,37506250,32504750,32505250,32505750,27504750,27505250,
-                            22504750,47503750,47503250,47502750,47502250,52503750,52503250,52502750,
-                            57503750,57503250,62503750,47504750,47505250,47505750,47506250,52504750,
-                            52505250,52505750,57504750,57505250,57505750
-                       };
-                       */
 void BLOCK::drawingFunc(bool drawing, int x, int y)
 {
     if(drawing)
@@ -302,7 +289,6 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 {
                     y2 = y1 = 50 - y%50 + y;
                 }
-     ///////////////////////////////////////////////////////////////////////////////
      // get median:
 
                 int Median = Generator.generator(x,y);
@@ -312,16 +298,10 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 int seperatex = (Median - seperate);
                 int Median1;
                 int Median2;
-                //seperate = seperate / 10; // we get y coordinate.
+
                 Median1 = seperatex + (seperate + 25);
                 Median2 = seperatex + (seperate - 25);
                 Generator.completeSquareChecking(Median1,Median2);
-                //win *getmidPoint = new win();
-    //////////////////////////////////////////////////////////////////////////////
-                //qDebug()<<midPoint[j];
-
-
-
      }
     else if (y%50 > 10 && y%50 < 40 && (x%50 <= 5 || (x%50 >= 45 && x%50 <= 49)))
             {
@@ -335,18 +315,16 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                 {
                    x2 = x1 = 50 - x%50 + x;
                 }
- //////////////////////////////////////////////////////////////////////////////
+
                 int Median = Generator.generator(x,y);
                 int seperatey = Median % 10000;
                 int seperatex = (Median - seperatey)/10000;
                 int Median1;
                 int Median2;
-                //seperate = seperate / 10; // we get y coordinate.
+
                 Median1 = seperatey + (seperatex + 25)*10000;
                 Median2 = seperatey + (seperatex - 25)*10000;
-               Generator.completeSquareChecking(Median1,Median2);
-//////////////////////////////////////////////////////////////////////////////
-               // qDebug()<<midPoint[j];
+                Generator.completeSquareChecking(Median1,Median2);
              }
 
                 int before_P1score = playerScore_1;
@@ -360,7 +338,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                    qDebug()<<"Get point = "<<Generator.getPoint();
                    int pos_x = 0;
                    int pos_y = 0;
-                   ///////////////////////////////////////////////
+
                    if (Generator.getPoint() == 1){
                        qDebug()<<"GREEN";
                        qDebug()<<scene();
@@ -371,7 +349,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                        if (midpointOFBlock1 != 0){
                           pos_x = (midpointOFBlock1 / 10000) - 20;
                           pos_y = (midpointOFBlock1 % 10000) - 20;
-                          //QGraphicsScene *s = new QGraphicsScene;
+
                           PlayerSymbol *Player_O = new PlayerSymbol();
                           Player_O->player_O(scene(),pos_x,pos_y);
                        }else if (midpointOFBlock2 != 0) {
@@ -383,9 +361,6 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                            PlayerSymbol *Player_O = new PlayerSymbol();
                            Player_O->player_O(scene(),pos_x,pos_y);
                        }
-                       ///////////////////////////////////////////////////////////////
-
-                       ///////////////////////////////////////////////////////////////
                    }else if (Generator.getPoint() == 2) {
                        int i = 0;
                        midpointOFBlock1 = Generator.getMidPoint1();
@@ -394,7 +369,6 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                        qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
                        while (i < 1) {
                          qDebug()<<"GREEN";
-                         //////////////////////
                          pos_x = (midpointOFBlock1 / 10000) - 20;
                          pos_y = (midpointOFBlock1 % 10000) - 20;
                          PlayerSymbol *Player_O = new PlayerSymbol();
@@ -404,11 +378,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                          pos_y = (midpointOFBlock2 % 10000) - 20;
                          PlayerSymbol *Player_O1 = new PlayerSymbol();
                          Player_O1->player_O(scene(),pos_x,pos_y);
-                         //////////////////////
                          i++;
                        }
                    }
-                   ///////////////////////////////////////////////
                    break;
                }
                case 1:
@@ -419,7 +391,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                    qDebug()<<"Get point = "<<Generator.getPoint();
                    int pos_x = 0;
                    int pos_y = 0;
-                   ///////////////////////////////////////////////
+
                    if (Generator.getPoint() == 1){
                        qDebug()<<"BLUE";
                        int midpointOFBlock1 = Generator.getMidPoint1();
@@ -448,7 +420,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                        qDebug()<<"Mid point of complete block 2 = "<<midpointOFBlock2;
                        while (i < 2) {
                          qDebug()<<"BLUE";
-                         //////////////////////
+
                          pos_x = (midpointOFBlock1 / 10000) - 20;
                          pos_y = (midpointOFBlock1 % 10000) - 20;
                          PlayerSymbol *Player_X = new PlayerSymbol();
@@ -458,11 +430,9 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                          pos_y = (midpointOFBlock2 % 10000) - 20;
                          PlayerSymbol *Player_X1 = new PlayerSymbol();
                          Player_X1->player_X(scene(),pos_x,pos_y);
-                         /////////////////////
                          i++;
                        }
                    }
-                   ///////////////////////////////////////////////
                    break;
                }
            }

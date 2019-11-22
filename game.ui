@@ -51,7 +51,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="styleSheet">
@@ -277,7 +277,7 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
       </widget>
       <widget class="QWidget" name="page_3">
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/backgroung1.png);
+        <string notr="true">border-image: url(:/play interface.jpg)
 </string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
@@ -343,8 +343,8 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
             </property>
             <property name="maximumSize">
              <size>
-              <width>60</width>
-              <height>60</height>
+              <width>62</width>
+              <height>62</height>
              </size>
             </property>
             <property name="styleSheet">
@@ -443,8 +443,8 @@ QPushButton:hover{
             </property>
             <property name="maximumSize">
              <size>
-              <width>60</width>
-              <height>60</height>
+              <width>62</width>
+              <height>62</height>
              </size>
             </property>
             <property name="styleSheet">

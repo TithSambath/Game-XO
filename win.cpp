@@ -9,13 +9,6 @@ QList<int> win :: storage;
 
 QList<int> win :: middlePoint;
 
-  /*int win :: border[44] = {4250150 , 4500175 , 4750200 , 5000225 , 5250250 , 5500275 , 5750300 , 6000325 , 6250350 , 6500375
-                          , 6750400 , 7000425 , 6750450 , 6500475 , 6250500 , 6000525 , 5750550 , 5500575 , 5250600 , 5000625
-                          , 4750650 , 4500675 , 4250700 , 4000675 , 3750650 , 3500625 , 3250600 , 3000575 , 2750550 , 2500525
-                          , 2250500 , 2000475 , 1750450 , 1500425 , 1750400 , 2000375 , 2250350 , 2500325 , 2750300 , 3000275
-                          , 3250250 , 3500225 , 3750200 , 4000175
-                         };*/
-
 int win::generator(int x, int y)
 {
     int median = 0;
@@ -46,7 +39,6 @@ int win::generator(int x, int y)
                 }
                 median = x * 10000 + y ;
             }
-    //qDebug() << "median = " << median;
     return median;
 }
 
@@ -73,7 +65,6 @@ bool win::storageManager(int median)
             }
         }
     }
-    //qDebug() << "manager = " << manager;
     return  manager;
 }
 
@@ -91,10 +82,9 @@ int win::storageFunc(bool manager , int median)
     {
         drawing = false;
     }
-    //qDebug() << "drawing = " << drawing ;
     return  drawing;
 }
-//ffff
+
 void win::completeSquareChecking(int midpoint1, int midpoint2)
 {
     point = 0;

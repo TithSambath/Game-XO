@@ -6,6 +6,7 @@
 #include <QGraphicsView>
 #include "win.h"
 #include <QMediaPlayer>
+#include "winner.h"
 class BLOCK : public QObject,public QGraphicsRectItem
 {
     Q_OBJECT
