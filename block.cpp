@@ -256,7 +256,6 @@ win BLOCK :: Generator ;
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     // Drawing sound:
-
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
     int median;

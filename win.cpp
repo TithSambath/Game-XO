@@ -94,7 +94,7 @@ int win::storageFunc(bool manager , int median)
     //qDebug() << "drawing = " << drawing ;
     return  drawing;
 }
-
+//ffff
 void win::completeSquareChecking(int midpoint1, int midpoint2)
 {
     point = 0;
