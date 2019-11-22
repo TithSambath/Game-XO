@@ -6,6 +6,7 @@
 #include <QGraphicsView>
 #include "win.h"
 #include <QMediaPlayer>
+#include "winner.h"
 class BLOCK : public QObject,public QGraphicsRectItem
 {
     Q_OBJECT
@@ -30,9 +31,10 @@ private:
     static int playerScore_2;
     int midpointOFBlock1;
     int midpointOFBlock2;
-    //QMediaPlayer *drawingSound;
+    // create Media:
     QMediaPlayer *drawingSound = new QMediaPlayer;
-
+    // create winner widget:
+    Winner *WinnerScoreWiget = new Winner;
 
 
 
