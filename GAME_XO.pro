@@ -31,7 +31,8 @@ SOURCES += \
         main.cpp \
         playerline.cpp \
         playersymbol.cpp \
-        win.cpp
+        win.cpp \
+        winner.cpp
 
 HEADERS += \
     block.h \
@@ -39,10 +40,12 @@ HEADERS += \
     game.h \
     playerline.h \
     playersymbol.h \
-    win.h
+    win.h \
+    winner.h
 
 FORMS += \
-    game.ui
+    game.ui \
+    winner.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

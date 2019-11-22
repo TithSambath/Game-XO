@@ -10,6 +10,7 @@
 #include <QLabel>
 #include <QPixmap>
 #include "playersymbol.h"
+#include "winner.h"
 
 BLOCK::BLOCK()
 {
@@ -476,6 +477,19 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                {
                    player = 0;
                }
+
+               // Generate Winner Score:
+               if (playerScore_1 + playerScore_2 == 61){
+                   if (playerScore_1 > playerScore_2){
+                       Winner *WinnerScoreWiget = new Winner;
+                       WinnerScoreWiget->setscore(playerScore_1); // PLAYER 1 IS O
+                       WinnerScoreWiget->show();
+                   }else {
+                       Winner *WinnerScoreWiget = new Winner;
+                       WinnerScoreWiget->setscore(playerScore_2); // PLAYER 2 IS X
+                       WinnerScoreWiget->show();
+                   }
+              }
     }
 
     qDebug() << "score player 1:" << playerScore_1;
