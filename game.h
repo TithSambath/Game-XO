@@ -31,8 +31,6 @@ private slots:
 
     void on_HomeButton_clicked();
 
-    void displayHello();
-
     void on_Music_Pause_clicked();
 
     //void on_Sound_Pause_clicked();

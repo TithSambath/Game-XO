@@ -19,7 +19,6 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 {
     int width = 50;
     int height = 50;
-    QThread delay;
     // Middle block: known as center coordinated.
         BLOCK *Mblock = new BLOCK;
         Mblock->setRect(0,0,width,height);
@@ -240,6 +239,8 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         dl4block1->setRect(0,0,50,50);
         dl4block1->setPos(600,450);
         parent->addItem(dl4block1);
+
+
 }
 
 
@@ -255,8 +256,6 @@ win BLOCK :: Generator ;
 void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
     // Drawing sound:
-       drawingSound = new QMediaPlayer;
-       drawingSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/drawing line.wav"));
 
     x = event->lastScenePos().x();
     y = event->lastScenePos().y();
@@ -267,11 +266,12 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
     drawing = Generator.storageFunc(manager , median );
     if(manager)
     {
+
+        drawingSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/drawing line.wav"));
         drawingSound->play();
     }
     drawingFunc(drawing , x , y);
-    emit this->setScorePlayer1(playerScore_1);
-    emit this->setScorePlayer2(playerScore_2);
+
 }
 
 /*

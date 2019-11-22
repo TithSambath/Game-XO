@@ -82,10 +82,7 @@ void Game::on_HomeButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void Game::displayHello()
-{
-    qDebug() << "hello hahahha";
-}
+
 
 void Game::on_Music_Pause_clicked()
 {
