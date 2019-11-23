@@ -42,6 +42,7 @@ private:
     QTimer *time ;
     QCursor pen_Blue = QCursor(QPixmap(":/Layer 0.png"),0,45);
     QCursor pen_Red = QCursor(QPixmap(":/red pencil.png"),0,45);
+    QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);
     QGraphicsScene *Scene = new QGraphicsScene;
     BLOCK *block = new BLOCK;
     BORDER *border = new BORDER;

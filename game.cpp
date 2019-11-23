@@ -27,8 +27,7 @@ Game::Game(QWidget *parent) :
           GameSound->play();
     // Change cursor pixmap:
           connect(time,SIGNAL(timeout()),this,SLOT(display()));
-          time->start(100);
-          QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);   
+          time->start(100);  
           ui->stackedWidget->setCursor(click);
           ui->PLAY_BUTTON_3->setCursor(click);
 }
