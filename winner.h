@@ -2,8 +2,6 @@
 #define WINNER_H
 
 #include <QWidget>
-#include <QString>
-
 namespace Ui {
 class Winner;
 }
@@ -15,8 +13,8 @@ class Winner : public QWidget
 public:
     explicit Winner(QWidget *parent = nullptr);
     ~Winner();
-    void setscore (int Player);
-
+    void setscore(int PlayerScore);
+    void GenerateWinner (int ScorePlayer2, int ScorePlayer1);
 private:
     Ui::Winner *ui;
 };

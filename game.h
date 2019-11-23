@@ -17,6 +17,7 @@ class Game : public QMainWindow
 public:
     explicit Game(QWidget *parent = nullptr);
     ~Game();
+    Winner *FindtheWinner = new Winner;
 
 private slots:
     void on_PLAY_BUTTON_3_clicked();
@@ -49,6 +50,7 @@ private:
     QMediaPlayer *MouseClickSound;
     int Pause_Music = 1;
     int Pause_Sound = 1;
+    void DisplaytheWinner();
 };
 
 #endif // GAME_H
