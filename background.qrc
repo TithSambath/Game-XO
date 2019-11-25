@@ -22,5 +22,11 @@
         <file>Back Home.png</file>
         <file>exit.png</file>
         <file>red pencil.png</file>
+        <file>Winner.png</file>
+        <file>popupwinner.png</file>
+        <file>Playerboy.png</file>
+        <file>BOY.png</file>
+        <file>girl.png</file>
+        <file>reset button.png</file>
     </qresource>
 </RCC>

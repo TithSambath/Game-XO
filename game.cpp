@@ -2,7 +2,6 @@
 #include "ui_game.h"
 #include <QtMultimedia/QMediaPlayer>
 #include <QtCore>
-#include "winner.h"
 Game::Game(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::Game)
@@ -25,6 +24,9 @@ Game::Game(QWidget *parent) :
           GameSound = new QMediaPlayer(this);
           GameSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/Intro game.mp3"));
           GameSound->play();
+    // Winning sound effect
+          WinningSound = new QMediaPlayer;
+          WinningSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/winning sound.mp3"));
     // Change cursor pixmap:
           connect(time,SIGNAL(timeout()),this,SLOT(display()));
           time->start(100);  
@@ -45,6 +47,7 @@ void Game::on_PLAY_BUTTON_3_clicked()
     block->Create_Board(Scene);
     border->Create_Border(Scene);
     GameSound->stop();
+    time->start(100);
 }
 
 void Game::on_reset_clicked()// reset button
@@ -55,7 +58,7 @@ void Game::on_reset_clicked()// reset button
     border->Create_Border(Scene);
     ui->label_4->setNum(block->getPlayerScore_2());
     ui->label_8->setNum(block->getPlayerScore_1());
-    FindtheWinner->close();
+    time->start(100);
 }
 void Game::on_option_button_clicked()
 {
@@ -67,6 +70,8 @@ void Game::on_option_button_clicked()
 void Game::on_back_button_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    Scene->clear();
+    time->stop();
 }
 
 void Game::on_HomeButton_clicked()
@@ -107,8 +112,12 @@ void Game::display()
 void Game::DisplaytheWinner()
 {
     if (block->getPlayerScore_1() + block->getPlayerScore_2() == 61){
-        FindtheWinner->GenerateWinner(block->getPlayerScore_2(),block->getPlayerScore_1());
-        FindtheWinner->show();
+        Findwinner.GenerateWinner(block->getPlayerScore_2(),block->getPlayerScore_1());
+        Findwinner.setModal(true);
+        WinningSound->play();
+        Findwinner.exec();
+        time->stop();
+        Game::on_reset_clicked();
     }
 }
 

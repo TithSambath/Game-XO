@@ -7,6 +7,7 @@ Winner::Winner(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint); // remove title bar.
+
 }
 
 Winner::~Winner()

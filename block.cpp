@@ -10,8 +10,6 @@
 #include <QLabel>
 #include <QPixmap>
 #include "playersymbol.h"
-#include "winner.h"
-
 BLOCK::BLOCK()
 {
 
@@ -20,10 +18,14 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
 {
     int width = 50;
     int height = 50;
+    QPen pen;
+    pen.setWidth(4);
+    pen.setColor(Qt::gray);
     // Middle block: known as center coordinated.
         BLOCK *Mblock = new BLOCK;
         Mblock->setRect(0,0,width,height);
         Mblock->setPos(400,400);
+        Mblock->setPen(pen);
         parent->addItem(Mblock);// Middle block:
 
     // Mleft Block:
@@ -36,7 +38,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             LBlock->setRect(0,0,50,50);
             LBlock->setPos(400+j,400);
             parent->addItem(LBlock);
-
+            LBlock->setPen(pen);
         }
     // Mdown block:
     i = 0;
@@ -48,6 +50,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Mdblock->setPos(400,400+j);
             // add item to graphicsScene:
             parent->addItem(Mdblock);
+            Mdblock->setPen(pen);
         }
     // Mtop block:
     i = 0;
@@ -59,6 +62,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Mtblock->setPos(400,400-j);
             // add item to graphicsScene:
             parent->addItem(Mtblock);
+            Mtblock->setPen(pen);
         }
    // Mright Block:
     i = 0;
@@ -70,6 +74,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Mrblock->setPos(400-j,400);
             // add item to graphicsScene:
             parent->addItem(Mrblock);
+            Mrblock->setPen(pen);
       }
 
    // Top right column 1 conner:
@@ -82,6 +87,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Trblock1->setPos(350,400-j);
             // add item to graphicsScene:
             parent->addItem(Trblock1);
+            Trblock1->setPen(pen);
         }
 
    // Top right column 2 conner:
@@ -94,6 +100,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Trblock2->setPos(300,400-j);
             // add item to graphicsScene:
             parent->addItem(Trblock2);
+            Trblock2->setPen(pen);
         }
 
    // Top right column 3 conner:
@@ -106,6 +113,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Trblock3->setPos(250,400-j);
             // add item to graphicsScene:
             parent->addItem(Trblock3);
+            Trblock3->setPen(pen);
         }
 
   // Top right column 4 conner:
@@ -113,6 +121,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         Tr4block1->setRect(0,0,50,50);
         Tr4block1->setPos(200,350);
         parent->addItem(Tr4block1);
+        Tr4block1->setPen(pen);
 
   // Down right column 1 conner:
    i = 0;
@@ -124,6 +133,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             drblock1->setPos(350,400+j);
             // add item to graphicsScene:
             parent->addItem(drblock1);
+            drblock1->setPen(pen);
         }
 
  // // Down right column 2 conner:
@@ -136,6 +146,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             drblock2->setPos(300,400+j);
             // add item to graphicsScene:
             parent->addItem(drblock2);
+            drblock2->setPen(pen);
         }
 
 // // // Down right column 3 conner:
@@ -148,6 +159,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             drblock3->setPos(250,400+j);
             // add item to graphicsScene:
             parent->addItem(drblock3);
+            drblock3->setPen(pen);
         }
 
 // // // // Down right column conner:
@@ -155,6 +167,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         dr4block1->setRect(0,0,50,50);
         dr4block1->setPos(200,450);
         parent->addItem(dr4block1);
+        dr4block1->setPen(pen);
 
  // Top left column 1 conner:
   i = 0;
@@ -166,6 +179,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Tlblock1->setPos(450,400-j);    //Top Left conner: is the first block
             // add item to graphicsScene:
             parent->addItem(Tlblock1);
+            Tlblock1->setPen(pen);
         }
 
  // // Top left column 2 conner:
@@ -178,6 +192,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Tlblock2->setPos(500,400-j);    //Top Left conner: is the first block
             // add item to graphicsScene:
             parent->addItem(Tlblock2);
+            Tlblock2->setPen(pen);
         }
 
  // // // Top Left column 3 conner:
@@ -190,6 +205,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             Tlblock3->setPos(550,400-j);    //Top Left conner: is the first block
             // add item to graphicsScene:
             parent->addItem(Tlblock3);
+            Tlblock3->setPen(pen);
         }
 
 // // // // Top Left column 4 conner:
@@ -197,6 +213,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         Tl4block1->setRect(0,0,50,50);
         Tl4block1->setPos(600,350);
         parent->addItem(Tl4block1);
+        Tl4block1->setPen(pen);
 
      // Down Left column 1 conner:
   i = 0;
@@ -208,6 +225,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             dlblock1->setPos(450,400+j);
             // add item to graphicsScene:
             parent->addItem(dlblock1);
+            dlblock1->setPen(pen);
         }
 
   // // Down Left column 2 conner:
@@ -220,6 +238,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             dlblock2->setPos(500,400+j);
             // add item to graphicsScene:
             parent->addItem(dlblock2);
+            dlblock2->setPen(pen);
         }
 
   // // // Down Left column 3 conner:
@@ -232,6 +251,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
             dlblock3->setPos(550,400+j);
             // add item to graphicsScene:
             parent->addItem(dlblock3);
+            dlblock3->setPen(pen);
         }
 
   // // // // Down Left column 4 conner:
@@ -239,6 +259,7 @@ void BLOCK::Create_Board(QGraphicsScene *parent)
         dl4block1->setRect(0,0,50,50);
         dl4block1->setPos(600,450);
         parent->addItem(dl4block1);
+        dl4block1->setPen(pen);
 
 
 }
