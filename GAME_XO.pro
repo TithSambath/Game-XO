@@ -31,6 +31,7 @@ SOURCES += \
         main.cpp \
         playerline.cpp \
         playersymbol.cpp \
+        thewinner.cpp \
         win.cpp \
         winner.cpp
 
@@ -40,11 +41,13 @@ HEADERS += \
     game.h \
     playerline.h \
     playersymbol.h \
+    thewinner.h \
     win.h \
     winner.h
 
 FORMS += \
     game.ui \
+    thewinner.ui \
     winner.ui
 
 # Default rules for deployment.

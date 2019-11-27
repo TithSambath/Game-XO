@@ -5,6 +5,7 @@
 #include "block.h"
 #include "border.h"
 #include <QMediaPlayer>
+#include "thewinner.h"
 
 namespace Ui {
 class Game;
@@ -17,7 +18,7 @@ class Game : public QMainWindow
 public:
     explicit Game(QWidget *parent = nullptr);
     ~Game();
-    Winner *FindtheWinner = new Winner;
+    TheWinner Findwinner;
 
 private slots:
     void on_PLAY_BUTTON_3_clicked();
@@ -48,6 +49,7 @@ private:
     BORDER *border = new BORDER;
     QMediaPlayer *GameSound;
     QMediaPlayer *MouseClickSound;
+    QMediaPlayer *WinningSound;
     int Pause_Music = 1;
     int Pause_Sound = 1;
     void DisplaytheWinner();

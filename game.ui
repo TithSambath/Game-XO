@@ -73,22 +73,6 @@
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="1" column="0">
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
         <item row="1" column="2">
          <spacer name="horizontalSpacer">
           <property name="orientation">
@@ -101,19 +85,6 @@
            <size>
             <width>40</width>
             <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="0" column="1">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
            </size>
           </property>
          </spacer>
@@ -257,6 +228,38 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
           </item>
          </layout>
         </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="1">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
         <item row="2" column="1">
          <spacer name="verticalSpacer_2">
           <property name="orientation">
@@ -277,8 +280,7 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
       </widget>
       <widget class="QWidget" name="page_3">
        <property name="styleSheet">
-        <string notr="true">border-image: url(:/play interface.jpg)
-</string>
+        <string notr="true">border-color: rgb(255, 255, 255);</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <property name="leftMargin">
@@ -341,6 +343,12 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
             <property name="enabled">
              <bool>true</bool>
             </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>60</width>
@@ -397,6 +405,12 @@ QPushButton:hover{
           </item>
           <item>
            <widget class="QPushButton" name="reset">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>60</width>
@@ -410,7 +424,16 @@ QPushButton:hover{
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/back buttton.png);</string>
+             <string notr="true">QPushButton{
+	border-image: url(:/reset button.png);
+	max-width: 60px;
+	max-height: 60px;
+
+}
+QPushButton:hover{
+	border-image: url(:/reset button.png);
+	border-width:  5%
+}</string>
             </property>
             <property name="text">
              <string/>
@@ -441,6 +464,12 @@ QPushButton:hover{
           </item>
           <item>
            <widget class="QPushButton" name="pushbuton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>60</width>
@@ -517,6 +546,32 @@ color: rgb(0, 0, 127);</string>
            </widget>
           </item>
           <item>
+           <widget class="QLabel" name="label_3">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);
+border-image: url(:/BOY.png);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
            <widget class="QLabel" name="label_4">
             <property name="minimumSize">
              <size>
@@ -555,31 +610,6 @@ color: rgb(0, 0, 127);</string>
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QLabel" name="label_3">
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>150</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);</string>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
          </layout>
         </item>
         <item row="1" column="4">
@@ -614,6 +644,32 @@ color: rgb(255, 0, 0);</string>
             </property>
             <property name="text">
              <string>Player O</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>150</width>
+              <height>150</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);
+border-image: url(:/girl.png);</string>
+            </property>
+            <property name="text">
+             <string/>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -659,31 +715,6 @@ color: rgb(255, 0, 0);</string>
             </property>
             <property name="indent">
              <number>0</number>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_6">
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>150</width>
-              <height>150</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);</string>
-            </property>
-            <property name="text">
-             <string>TextLabel</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
