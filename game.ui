@@ -51,7 +51,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page">
        <property name="styleSheet">
@@ -280,7 +280,8 @@ QPushButton:hover {border-image: url(:/quit button.png);border-width: 20%}</stri
       </widget>
       <widget class="QWidget" name="page_3">
        <property name="styleSheet">
-        <string notr="true">border-color: rgb(255, 255, 255);</string>
+        <string notr="true">border-color: rgb(255, 255, 255);
+border-image: url(:/back123.png);</string>
        </property>
        <layout class="QGridLayout" name="gridLayout_2">
         <property name="leftMargin">
@@ -506,7 +507,7 @@ color: rgb(255, 0, 0);</string>
               </property>
               <property name="styleSheet">
                <string notr="true">border-image: url(:/1600x500-blank-png - Copy.png);
-border-image: url(:/girl.png);</string>
+border-image: url(:/girl12.png);</string>
               </property>
               <property name="text">
                <string/>
@@ -608,13 +609,13 @@ border-image: url(:/girl.png);</string>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
-	border-image: url(:/Back Home.png);
+    border-image: url(:/home 1.png);
 	max-width: 60px;
 	max-height: 60px;
 
 }
 QPushButton:hover{
-	border-image: url(:/Back Home.png);
+	border-image: url(:/home 1.png);
 	border-width:  5%
 }</string>
             </property>
@@ -665,18 +666,19 @@ QPushButton:hover{
             <property name="maximumSize">
              <size>
               <width>60</width>
-              <height>60</height>
+              <height>70</height>
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">QPushButton{
-	border-image: url(:/reset button.png);
+             <string notr="true">QPushButton{	
+	border-image: url(:/reset tt.png);
 	max-width: 60px;
-	max-height: 60px;
+	max-height: 70px;
 
 }
 QPushButton:hover{
-	border-image: url(:/reset button.png);
+	border-image: url(:/reset tt.png);
+	
 	border-width:  5%
 }</string>
             </property>
@@ -724,14 +726,15 @@ QPushButton:hover{
             <property name="maximumSize">
              <size>
               <width>60</width>
-              <height>60</height>
+              <height>70</height>
              </size>
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
+
 	border-image: url(:/exit.png);
 	max-width: 60px;
-	max-height: 60px;
+	max-height: 70px;
 
 }
 QPushButton:hover{
@@ -856,7 +859,8 @@ QPushButton:hover{
              </size>
             </property>
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/complete check.png);</string>
+             <string notr="true">border-image: url(:/complete check.png);
+</string>
             </property>
             <property name="text">
              <string/>
@@ -886,6 +890,7 @@ QPushButton:hover{
             </property>
             <property name="styleSheet">
              <string notr="true">QPushButton{
+	
 	border-image: url(:/back of button.png);
 	max-width: 70px;
 	max-height: 54px;
@@ -1126,17 +1131,25 @@ QPushButton:hover{
           <item row="4" column="5">
            <widget class="QLabel" name="label">
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/music.png);</string>
+             <string notr="true">border-image: url(:/1e1w.png);
+</string>
             </property>
             <property name="text">
              <string/>
+            </property>
+            <property name="textFormat">
+             <enum>Qt::AutoText</enum>
+            </property>
+            <property name="indent">
+             <number>0</number>
             </property>
            </widget>
           </item>
           <item row="6" column="5">
            <widget class="QLabel" name="label_2">
             <property name="styleSheet">
-             <string notr="true">border-image: url(:/SOUND.png);</string>
+             <string notr="true">
+border-image: url(:/1awe.png);</string>
             </property>
             <property name="text">
              <string/>

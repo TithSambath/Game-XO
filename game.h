@@ -39,7 +39,7 @@ private slots:
     void display();
 
 
-    void on_pushbuton_clicked();
+    void on_Sound_Pause_clicked();
 
 private:
     Ui::Game *ui;

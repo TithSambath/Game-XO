@@ -129,7 +129,3 @@ void Game::DisplaytheWinner()
 }
 
 
-void Game::on_pushbuton_clicked()
-{
-    this->close();
-}

@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image: url(:/popupwinner.png);</string>
+   <string notr="true">
+border-image: url(:/1a1.png);</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <property name="leftMargin">
@@ -37,22 +38,6 @@
      <property name="spacing">
       <number>0</number>
      </property>
-     <item row="0" column="0">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeType">
-        <enum>QSizePolicy::Fixed</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>10</width>
-         <height>100</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item row="2" column="0">
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
@@ -126,6 +111,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QPushButton" name="pushButton_2">
            <property name="minimumSize">
@@ -141,14 +129,14 @@
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{
-	border-image: url(:/Back Home.png);
+            <string notr="true">QPushButton{	
+	border-image: url(:/ho1.png);
 	max-width: 60px;
 	max-height: 60px;
 
 }
 QPushButton:hover{
-	border-image: url(:/Back Home.png);
+	border-image: url(:/ho1.png);
 	border-width:  5%
 }</string>
            </property>
@@ -172,17 +160,15 @@ QPushButton:hover{
             </size>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton{
-	
-	
-	border-image: url(:/O Player.png);
+            <string notr="true">QPushButton{		
+	border-image: url(:/mn.png);
 	max-width: 60px;
 	max-height: 60px;
 
 }
 QPushButton:hover{
 	
-	border-image: url(:/O Player.png);
+	border-image: url(:/mn.png);
 	border-width:  5%
 }</string>
            </property>
@@ -207,6 +193,22 @@ QPushButton:hover{
         <size>
          <width>20</width>
          <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="0" column="0">
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>100</height>
         </size>
        </property>
       </spacer>
