@@ -22,6 +22,9 @@ public:
 
     static int getPlayer();
 
+signals:
+    void signalDisplay();
+
 private:
     QGraphicsScene *add_to_scene = new QGraphicsScene;
     void DefinePlayerTurn(int CountPlayerTurn);

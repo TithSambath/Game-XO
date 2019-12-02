@@ -289,6 +289,7 @@ void BLOCK::mousePressEvent(QGraphicsSceneMouseEvent *event)
         drawingSound->setMedia(QUrl("qrc:/Sound EFFECT/Game Sound/drawing line.wav"));
         drawingSound->play();
     }
+    emit signalDisplay();
     drawingFunc(drawing , x , y);
 
 }
@@ -469,20 +470,7 @@ void BLOCK::drawingFunc(bool drawing, int x, int y)
                    player = 0;
                }
 
-               // Generate Winner Score:(create function and add delay).
-              /*
-               if (playerScore_1 + playerScore_2 == 61){
-                   if (playerScore_1 > playerScore_2){
-                       Winner *WinnerScoreWiget = new Winner;
-                       WinnerScoreWiget->setscore(playerScore_1); // PLAYER 1 IS O
-                       WinnerScoreWiget->show();
-                   }else {
-                       Winner *WinnerScoreWiget = new Winner;
-                       WinnerScoreWiget->setscore(playerScore_2); // PLAYER 2 IS X
-                       WinnerScoreWiget->show();
-                   }
-              }
-              */
+
     }
 
     qDebug() << "score player 1:" << playerScore_1;

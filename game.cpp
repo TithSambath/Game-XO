@@ -32,6 +32,12 @@ Game::Game(QWidget *parent) :
           time->start(100);  
           ui->stackedWidget->setCursor(click);
           ui->PLAY_BUTTON_3->setCursor(click);
+
+       block = new BLOCK;
+       //connect(block,&BLOCK::signalDisplay,this,&Game::display);
+       //block->signalDisplay();
+       connect(&Findwinner,&TheWinner::backtoHome,this,&Game::on_HomeButton_clicked);
+       connect(&Findwinner,&TheWinner::Reset,this,&Game::on_reset_clicked);
 }
 
 Game::~Game()
@@ -46,6 +52,7 @@ void Game::on_PLAY_BUTTON_3_clicked()
     ui->stackedWidget->setCurrentIndex(1);
     block->Create_Board(Scene);
     border->Create_Border(Scene);
+
     GameSound->stop();
     time->start(100);
 }
@@ -121,3 +128,8 @@ void Game::DisplaytheWinner()
     }
 }
 
+
+void Game::on_pushbuton_clicked()
+{
+    this->close();
+}

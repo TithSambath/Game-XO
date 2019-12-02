@@ -17,8 +17,16 @@ public:
     void setscore(int PlayerScore);
     void GenerateWinner (int ScorePlayer2, int ScorePlayer1);
 
-private slots:
+signals:
+    void backtoHome();
+    void Reset();
 
+public slots:
+
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_clicked();
 
 private:
     Ui::TheWinner *ui;

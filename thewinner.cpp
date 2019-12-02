@@ -1,5 +1,6 @@
 #include "thewinner.h"
 #include "ui_thewinner.h"
+#include <QDebug>
 
 TheWinner::TheWinner(QWidget *parent) :
     QDialog(parent),
@@ -7,6 +8,7 @@ TheWinner::TheWinner(QWidget *parent) :
 {
     ui->setupUi(this);
     setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+
 }
 
 TheWinner::~TheWinner()
@@ -28,3 +30,15 @@ void TheWinner::GenerateWinner(int ScorePlayer2, int ScorePlayer1)
     }
 }
 
+
+void TheWinner::on_pushButton_2_clicked()
+{
+    emit backtoHome();
+    this->close();
+}
+
+void TheWinner::on_pushButton_clicked()
+{
+    emit Reset();
+    this->close();
+}

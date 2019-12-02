@@ -20,6 +20,7 @@ public:
     ~Game();
     TheWinner Findwinner;
 
+
 private slots:
     void on_PLAY_BUTTON_3_clicked();
 
@@ -38,6 +39,8 @@ private slots:
     void display();
 
 
+    void on_pushbuton_clicked();
+
 private:
     Ui::Game *ui;
     QTimer *time ;
@@ -45,7 +48,8 @@ private:
     QCursor pen_Red = QCursor(QPixmap(":/red pencil.png"),0,45);
     QCursor click = QCursor(QPixmap(":/curcor.png"),0,0);
     QGraphicsScene *Scene = new QGraphicsScene;
-    BLOCK *block = new BLOCK;
+    TheWinner *winnerDialog = new TheWinner;
+    BLOCK *block;
     BORDER *border = new BORDER;
     QMediaPlayer *GameSound;
     QMediaPlayer *MouseClickSound;
